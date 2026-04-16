@@ -1,11 +1,5 @@
 /**
  * ガンちゃん v2.15 — Backend API（Vercel Serverless Function + Vercel Blob）
- *
- * ■ セキュリティ対策
- *   [XSS]    出力はすべて JSON。HTML は一切出力しない
- *   [CSRF]   Origin / Referer ヘッダーを検証
- *   [入力検証] 各フィールドの型・長さ・形式を厳格にバリデーション
- *   [ストレージ] Vercel Blob を使用。ファイルシステムに依存しない
  */
 
 import { put, list } from '@vercel/blob';
@@ -21,7 +15,7 @@ export default async function handler(req, res) {
   res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
 
-  // ── CSRF: Originチェック（変更・削除系のみ） ──────────────────
+  // ── CSRF: Originチェック（POST のみ） ─────────────────────────
   if (req.method === 'POST') {
     const origin  = req.headers['origin']  ?? '';
     const referer = req.headers['referer'] ?? '';
@@ -33,7 +27,7 @@ export default async function handler(req, res) {
     }
   }
 
-  // ── プロジェクトID ─────────────────────────────────────────
+  // ── プロジェクトID → Blobパス ──────────────────────────────────
   const p = (req.query.p ?? '').replace(/[^a-zA-Z0-9_\-]/g, '');
   const blobPath = `gantt/${p !== '' ? p : 'default'}.json`;
 
@@ -48,12 +42,17 @@ export default async function handler(req, res) {
     //  LOAD
     // ════════════════════════════════════════════════════════════
     if (action === 'load') {
-      const { blobs } = await list({ prefix: blobPath, limit: 1 });
+      const { blobs } = await list({
+        prefix: blobPath,
+        limit: 1,
+        token: process.env.BLOB_READ_WRITE_TOKEN,
+      });
       const blob = blobs.find(b => b.pathname === blobPath);
 
       if (blob) {
-        const resp = await fetch(blob.downloadUrl);
-        if (!resp.ok) throw new Error('Blob fetch failed');
+        // publicブロブはURLに直接アクセス可能
+        const resp = await fetch(blob.url);
+        if (!resp.ok) throw new Error(`Blob fetch failed: ${resp.status}`);
         const data = await resp.json();
         return res.status(200).json(data);
       }
@@ -136,10 +135,13 @@ export default async function handler(req, res) {
         _version:       APP_VER,
       };
 
+      // addRandomSuffix: false → 毎回同じパスに上書き保存
       await put(blobPath, JSON.stringify(cleanData), {
-        access: 'private',
-        contentType: 'application/json',
-        allowOverwrite: true,
+        access:          'public',
+        contentType:     'application/json',
+        addRandomSuffix: false,
+        allowOverwrite:  true,
+        token:           process.env.BLOB_READ_WRITE_TOKEN,
       });
 
       const ts = jstNow();
@@ -147,7 +149,7 @@ export default async function handler(req, res) {
     }
   } catch (err) {
     console.error('[ガンちゃん API Error]', err);
-    return res.status(500).json({ error: 'サーバーエラーが発生しました' });
+    return res.status(500).json({ error: 'サーバーエラーが発生しました', detail: err.message });
   }
 }
 
