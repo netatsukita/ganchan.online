@@ -50,8 +50,8 @@ export default async function handler(req, res) {
       const blob = blobs.find(b => b.pathname === blobPath);
 
       if (blob) {
-        // publicブロブはURLに直接アクセス可能
-        const resp = await fetch(blob.url);
+        // privateブロブは downloadUrl（署名付きURL）で取得
+        const resp = await fetch(blob.downloadUrl);
         if (!resp.ok) throw new Error(`Blob fetch failed: ${resp.status}`);
         const data = await resp.json();
         return res.status(200).json(data);
@@ -137,7 +137,7 @@ export default async function handler(req, res) {
 
       // addRandomSuffix: false → 毎回同じパスに上書き保存
       await put(blobPath, JSON.stringify(cleanData), {
-        access:          'public',
+        access:          'private',
         contentType:     'application/json',
         addRandomSuffix: false,
         allowOverwrite:  true,
