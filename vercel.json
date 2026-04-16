@@ -1,9 +1,14 @@
 {
   "functions": {
-    "api/index.js": {
-      "maxDuration": 10
-    }
+    "api/index.js": { "maxDuration": 10 },
+    "api/cleanup.js": { "maxDuration": 60 }
   },
+  "crons": [
+    {
+      "path": "/api/cleanup",
+      "schedule": "0 18 * * *"
+    }
+  ],
   "rewrites": [
     { "source": "/api.php", "destination": "/api" }
   ]
