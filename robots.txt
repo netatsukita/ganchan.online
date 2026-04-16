@@ -1,0 +1,12 @@
+# robots.txt — ガンちゃん (https://ganchan.online/)
+# 株式会社好循環
+
+# すべてのクローラーに許可
+User-agent: *
+Allow: /
+
+# データフォルダはクロール禁止（JSONデータ・ログを保護）
+Disallow: /data/
+
+# サイトマップの場所を通知
+Sitemap: https://ganchan.online/sitemap.xml

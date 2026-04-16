@@ -1,0 +1,2983 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══ SEO META ═══ -->
+<title>ガンちゃん | 無料のWebガントチャートツール | 株式会社好循環</title>
+<meta name="description" content="ガンちゃんは、ログイン不要でブラウザから使える無料のWebガントチャートツールです。タスク管理・担当者管理・イナズマ線による遅延可視化を実現。株式会社好循環が提供。">
+<meta name="keywords" content="ガントチャート,無料,Web,タスク管理,プロジェクト管理,スケジュール管理,イナズマ線,gantt chart,好循環">
+<meta name="author" content="株式会社好循環">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ganchan.online/">
+
+<!-- ═══ OGP ═══ -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="ガンちゃん | 無料のWebガントチャートツール">
+<meta property="og:description" content="ログイン不要・インストール不要のWebガントチャートツール。タスク管理・進捗管理をシンプルに。">
+<meta property="og:url" content="https://ganchan.online/">
+<meta property="og:site_name" content="ガンちゃん">
+<meta property="og:locale" content="ja_JP">
+
+<!-- ═══ TWITTER CARD ═══ -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ガンちゃん | 無料のWebガントチャートツール">
+<meta name="twitter:description" content="ログイン不要のWebガントチャートツール。イナズマ線で遅延を可視化。">
+
+<!-- ═══ FAVICON ═══ -->
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFsUlEQVR42rVXTWxcVxX+vnvvjO2xTWiapjGulNiJ5i+xS2QiClL1QKxAqrqqVAkUQRcIddFFQSxQhYTEj4SQqPiREAvqRYWEvGGJxAIGsSgh06I6cuyxEyepA5q0wZU9/nvv3fuxmBnHU3vi2Lhn85507z3n3HO+851ziaZYAB4AzuZLz4O4LOBZAE+01kESBxYSkCCFBmH+FoDJxbmZqdaqARDY/jlTKBQs7a+NtV9SCPDB34D4PihPwQvwJDxEiTJtExAeeEaIohflKaaAAkAr6Iwx5ry1Fqn3f/U+efn2/Px1AIYAMFosXiDMX6y1JxKfTlriF8dyuWvVajXB0Yg5WyqVILxirfumD/6+FL5wc3b2GocmJnJ9q+tv2YwbS5L0xVu163/AxygjhfJXnbNv+jR9N15bfcb1rq295LLZsTiOf5Q68+ezpfPfC973gdRRGqZkBNxfnJv5+Zl88WI2m/02+vsvc7RQfJs0F7YaK8cy/YOvZpz7YZqk0wCyO3IbBB3WITbBxj5r3agPyVhszL97AupSqDoIY0Hh1tLS0sZovtSfJMnCYm12/KhDXz5dPrXRk7xnDHqWZmb+O5ovLYEYdyAtgTUAFGUlbFy89PnP+ZBcAtlgwCeM9Pd33vnn21EUmUqlEg4KQABh02qQpJMCW7bWIFi3I0wCKALZlOl7hAmAiQN8jzPhLoBQqVTU3HdgCcaYELDtu1o24T6SLAnomb5yZQnA0h6KtE+u99oTAEBCvNch11o0ABCkdWvtUyP54gLIHkoObCnWDi8BNmmuSUSEuNMBkQFQoCCAQVQaEIxpHgktNdSuCJAZKawQ+FVL0aoJSj0pkoEMgYEhAGK7TOkFMjA0FQcGCxgjgZRsgAYs1QvhpIDXSHBXBHZIVkHLi7XZ1wFgpFjMy6jHEIICIUBshasjMUJo0joICvCgoaAMtbkyf+P27c1isfh4LLwmaQd1U7swAMBFUeTu1OujDLwKmsEmBXRtRgGSti+m9oepMcGZ3tz3oyj66eLd9590VntiQMADr0SGSqWSApgfmpg49Z9qdf1h8C4UCoM0zO6JV3kYa1YrlUp67tz5rQBhO3WiAXenoEND79bW4Gih9DqBbBDUgXTTLPAkxo9v3rw+/wjVga5V0E18HOcc7ZCALPcKvOGH1ibr+xjnw8rXtbbt5SXv1GqLAJ7rdni0UPiMt9lnz+ZLmXYBBjIYY4xX+o9bc3NzLSbsOq64fRtJFFmcPPngBvfuEQDO3b1rg8zPiDAeiASAAQlKKQhHzx8AmJuYmDDVatUfKgUAhCYgtx2KosgCAIaHfaVS+WK5XM709fXtCnG1Wk2iKHL79Q53QE5XpdMhzMzMxN02f3Rv581Egk0HiG26VZfZ0wAII8Vi3sp+PSCwScdit/GjucbNjPwva7XaBx0EtAN3jxaBF14gpqZggSFRX4EEiuZhFSaQJDY2gUkAH6CnPXcfJgVTUx4AFmZnKwA+faixKKbUyYQdEXhAMgKjKHKNRoMDAwMdJxqNBjc2Ng70QIjjmMPDw/5OfdlSAZ3zR7MMY4i59kACaOth4DmMLCws4OnTT99b6VFKNg1D6AXkHYBpGl4cmpjIqdFIrHGFkXzxDbLdJ/7/gRhgWEVyzFnn0jROnyqXj5uAUwq66iRNZjKZS70rje/C8veAxgAMda2HQ4vgffrmYq12baRQ/InNZJ1P4zf45Ph4f24rvuKsK8dp/OXbtdqfPs6HyZl8/vmMy/7Rp346Xl/9rF2r15PHnzjxloSvWeu+8cnHjofHjn1qdnm5vnaUhk+Xy6eOHz/xHecyv5G0GgKfu3PrxhLbL+PT54rPWMffOZcppXHcAPEviGv7tdNHib2oAYIXXSaT82k6LfmXbs7NXQVgufN5XigUBhOYbxG8DOICjwgGkgDo3QBOri/f/229Xl9r2/wfZcm7T/qO2yUAAAAASUVORK5CYII=">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFsUlEQVR42rVXTWxcVxX+vnvvjO2xTWiapjGulNiJ5i+xS2QiClL1QKxAqrqqVAkUQRcIddFFQSxQhYTEj4SQqPiREAvqRYWEvGGJxAIGsSgh06I6cuyxEyepA5q0wZU9/nvv3fuxmBnHU3vi2Lhn85507z3n3HO+851ziaZYAB4AzuZLz4O4LOBZAE+01kESBxYSkCCFBmH+FoDJxbmZqdaqARDY/jlTKBQs7a+NtV9SCPDB34D4PihPwQvwJDxEiTJtExAeeEaIohflKaaAAkAr6Iwx5ry1Fqn3f/U+efn2/Px1AIYAMFosXiDMX6y1JxKfTlriF8dyuWvVajXB0Yg5WyqVILxirfumD/6+FL5wc3b2GocmJnJ9q+tv2YwbS5L0xVu163/AxygjhfJXnbNv+jR9N15bfcb1rq295LLZsTiOf5Q68+ezpfPfC973gdRRGqZkBNxfnJv5+Zl88WI2m/02+vsvc7RQfJs0F7YaK8cy/YOvZpz7YZqk0wCyO3IbBB3WITbBxj5r3agPyVhszL97AupSqDoIY0Hh1tLS0sZovtSfJMnCYm12/KhDXz5dPrXRk7xnDHqWZmb+O5ovLYEYdyAtgTUAFGUlbFy89PnP+ZBcAtlgwCeM9Pd33vnn21EUmUqlEg4KQABh02qQpJMCW7bWIFi3I0wCKALZlOl7hAmAiQN8jzPhLoBQqVTU3HdgCcaYELDtu1o24T6SLAnomb5yZQnA0h6KtE+u99oTAEBCvNch11o0ABCkdWvtUyP54gLIHkoObCnWDi8BNmmuSUSEuNMBkQFQoCCAQVQaEIxpHgktNdSuCJAZKawQ+FVL0aoJSj0pkoEMgYEhAGK7TOkFMjA0FQcGCxgjgZRsgAYs1QvhpIDXSHBXBHZIVkHLi7XZ1wFgpFjMy6jHEIICIUBshasjMUJo0joICvCgoaAMtbkyf+P27c1isfh4LLwmaQd1U7swAMBFUeTu1OujDLwKmsEmBXRtRgGSti+m9oepMcGZ3tz3oyj66eLd9590VntiQMADr0SGSqWSApgfmpg49Z9qdf1h8C4UCoM0zO6JV3kYa1YrlUp67tz5rQBhO3WiAXenoEND79bW4Gih9DqBbBDUgXTTLPAkxo9v3rw+/wjVga5V0E18HOcc7ZCALPcKvOGH1ibr+xjnw8rXtbbt5SXv1GqLAJ7rdni0UPiMt9lnz+ZLmXYBBjIYY4xX+o9bc3NzLSbsOq64fRtJFFmcPPngBvfuEQDO3b1rg8zPiDAeiASAAQlKKQhHzx8AmJuYmDDVatUfKgUAhCYgtx2KosgCAIaHfaVS+WK5XM709fXtCnG1Wk2iKHL79Q53QE5XpdMhzMzMxN02f3Rv581Egk0HiG26VZfZ0wAII8Vi3sp+PSCwScdit/GjucbNjPwva7XaBx0EtAN3jxaBF14gpqZggSFRX4EEiuZhFSaQJDY2gUkAH6CnPXcfJgVTUx4AFmZnKwA+faixKKbUyYQdEXhAMgKjKHKNRoMDAwMdJxqNBjc2Ng70QIjjmMPDw/5OfdlSAZ3zR7MMY4i59kACaOth4DmMLCws4OnTT99b6VFKNg1D6AXkHYBpGl4cmpjIqdFIrHGFkXzxDbLdJ/7/gRhgWEVyzFnn0jROnyqXj5uAUwq66iRNZjKZS70rje/C8veAxgAMda2HQ4vgffrmYq12baRQ/InNZJ1P4zf45Ph4f24rvuKsK8dp/OXbtdqfPs6HyZl8/vmMy/7Rp346Xl/9rF2r15PHnzjxloSvWeu+8cnHjofHjn1qdnm5vnaUhk+Xy6eOHz/xHecyv5G0GgKfu3PrxhLbL+PT54rPWMffOZcppXHcAPEviGv7tdNHib2oAYIXXSaT82k6LfmXbs7NXQVgufN5XigUBhOYbxG8DOICjwgGkgDo3QBOri/f/229Xl9r2/wfZcm7T/qO2yUAAAAASUVORK5CYII=">
+
+<!-- ═══ STRUCTURED DATA ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ガンちゃん",
+  "applicationCategory": "BusinessApplication",
+  "description": "ログイン不要でブラウザから使える無料のWebガントチャートツール",
+  "url": "https://ganchan.online/",
+  "author": {
+    "@type": "Organization",
+    "name": "株式会社好循環",
+    "url": "https://kojunkan.jp"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "JPY"
+  },
+  "operatingSystem": "Web Browser",
+  "inLanguage": ["ja", "en"]
+}
+</script>
+
+<!-- ═══ GOOGLE TAG MANAGER ═══ -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WX5LLMKS');</script>
+<!-- End Google Tag Manager -->
+
+<!-- ═══ GOOGLE ADSENSE ═══ -->
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5344984270892015" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<style>
+/* ============================================================
+   ガンちゃん v2.5 — The Architectural Ledger
+============================================================ */
+:root {
+  --bg:            #f7f9fb;
+  --s-low:         #f0f4f7;
+  --s-lowest:      #ffffff;
+  --s-high:        #e1e9ee;
+  --s-highest:     #d9e4ea;
+  --primary:       #565e74;
+  --primary-fixed: #dae2fd;
+  --primary-cont:  #dae2fd;
+  --secondary:     #005bc4;
+  --tertiary:      #006d4a;
+  --err-cont:      #fe8983;
+  --err-on:        #752121;
+  --on-surface:    #2a3439;
+  --on-surface-v:  #566166;
+  --outline:       #717c82;
+  --outline-v:     #a9b4b9;
+  --green:         #006d4a;
+  --red:           #9f403d;
+  --amber:         #b76700;
+  --sidebar-w:     72px;
+  --hdr-h:         60px;
+  --left-w:        560px;
+  --row-h:         44px;
+  --day-w:         36px;
+  --bottom-h:      200px;
+  --r-xs: 2px; --r-sm: 4px; --r-md: 6px; --r-lg: 10px; --r-xl: 14px;
+  /* Font size scale */
+  --fs-base: 13px;
+}
+
+/* ── Font size modes ─── */
+body.fs-lg  { --fs-base: 15px }
+body.fs-sm  { --fs-base: 11px }
+
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0 }
+html,body { height:100%; overflow:hidden }
+body { overflow-y:auto !important }
+
+body {
+  font-family: 'Inter','Noto Sans JP',sans-serif;
+  background: var(--bg); color: var(--on-surface);
+  font-size: var(--fs-base);
+  display: flex;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mi {
+  font-family:'Material Symbols Outlined';
+  font-style:normal; font-weight:400; font-size:20px;
+  line-height:1; display:inline-flex; align-items:center; justify-content:center;
+  user-select:none;
+}
+
+::-webkit-scrollbar { width:4px; height:4px }
+::-webkit-scrollbar-thumb { background:var(--outline-v); border-radius:4px }
+
+/* ═══════════════════════════════════════════════════
+   SIDEBAR
+═══════════════════════════════════════════════════ */
+.sidebar {
+  width: var(--sidebar-w); flex-shrink:0;
+  background:var(--s-lowest);
+  border-right:1px solid rgba(169,180,185,.15);
+  display:flex; flex-direction:column; align-items:center;
+  padding:18px 0 20px;
+  position:fixed; left:0; top:0; bottom:0; z-index:50;
+}
+.sb-logo {
+  width:40px; height:40px; background:var(--s-lowest);
+  border-radius:var(--r-lg); display:flex; align-items:center; justify-content:center;
+  margin-bottom:20px; box-shadow:0 2px 12px rgba(0,91,196,.12); overflow:hidden;
+}
+.sb-nav { flex:1; display:flex; flex-direction:column; gap:4px; width:100%; padding:0 8px }
+.sb-item {
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:3px; padding:8px 4px; border-radius:var(--r-md);
+  cursor:pointer; color:var(--outline);
+  transition:background .15s, color .15s; text-decoration:none; border:none;
+  background:transparent; width:100%; font-family:inherit;
+}
+.sb-item:hover { background:var(--s-low); color:var(--on-surface) }
+.sb-item.active { background:var(--primary-fixed); color:var(--secondary) }
+.sb-item .label { font-size:9px; font-weight:700; letter-spacing:.3px }
+.sb-bottom { padding:0 8px; border-top:1px solid rgba(169,180,185,.15); padding-top:12px; width:100% }
+
+/* ═══════════════════════════════════════════════════
+   MAIN
+═══════════════════════════════════════════════════ */
+.main {
+  margin-left:var(--sidebar-w);
+  flex:1; display:flex; flex-direction:column;
+  min-height:0; overflow:hidden; min-width:0; flex:1;
+}
+
+/* ═══════════════════════════════════════════════════
+   HEADER
+═══════════════════════════════════════════════════ */
+.top-bar {
+  height:var(--hdr-h);
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(169,180,185,.12);
+  display:flex; align-items:center; padding:0 24px; gap:10px;
+  flex-shrink:0; position:sticky; top:0; z-index:40;
+}
+.pname-inp {
+  font-family:'Manrope',sans-serif;
+  font-size:17px; font-weight:800; color:var(--on-surface);
+  background:transparent; border:none; outline:none;
+  flex:1; max-width:380px; letter-spacing:-.3px; padding:0;
+}
+.pname-inp::placeholder { color:var(--outline-v) }
+.top-actions { margin-left:auto; display:flex; align-items:center; gap:7px }
+
+.btn {
+  display:inline-flex; align-items:center; gap:5px;
+  padding:7px 14px; font-family:'Manrope',sans-serif;
+  font-size:calc(var(--fs-base) - 1px); font-weight:700;
+  border:none; border-radius:var(--r-md); cursor:pointer;
+  white-space:nowrap; transition:all .14s; letter-spacing:.2px;
+}
+.btn:active { transform:scale(.97) }
+.btn-cta {
+  background:linear-gradient(135deg,var(--secondary) 0%,#0070e0 100%);
+  color:white; box-shadow:0 1px 6px rgba(0,91,196,.25);
+}
+.btn-cta:hover { box-shadow:0 3px 12px rgba(0,91,196,.35) }
+.btn-new {
+  background:linear-gradient(135deg,var(--primary) 0%,#4a5268 100%);
+  color:white; box-shadow:0 1px 4px rgba(86,94,116,.2);
+}
+.btn-new:hover { box-shadow:0 3px 10px rgba(86,94,116,.3) }
+.btn-save {
+  background:var(--s-lowest); color:var(--on-surface);
+  border:1px solid rgba(169,180,185,.25); box-shadow:0 1px 3px rgba(0,0,0,.05);
+}
+.btn-save:hover { background:var(--s-low) }
+.btn-ghost {
+  background:transparent; color:var(--primary);
+  border:1px solid rgba(169,180,185,.35);
+}
+.btn-ghost:hover { background:var(--s-low) }
+.btn-share {
+  background:var(--primary-fixed); color:var(--primary); border:none;
+}
+.btn-share:hover { background:#c5cfe8 }
+.btn-danger {
+  background:#fff0ee; color:var(--red); border:1px solid rgba(254,137,131,.3);
+}
+.btn-danger:hover { background:var(--err-cont); color:white }
+
+/* Save status */
+#ls { font-size:10px; color:var(--outline); white-space:nowrap }
+
+/* ═══════════════════════════════════════════════════
+   SUB-TOOLBAR
+═══════════════════════════════════════════════════ */
+.sub-bar {
+  height:40px; background:var(--s-high);
+  border-bottom:1px solid rgba(169,180,185,.12);
+  display:flex; align-items:center; padding:0 20px; gap:6px; flex-shrink:0;
+}
+.sb-lbl { font-size:10px; font-weight:700; color:var(--on-surface-v); letter-spacing:.5px; text-transform:uppercase; white-space:nowrap }
+.d-inp {
+  padding:4px 8px; border:1px solid rgba(169,180,185,.25);
+  border-radius:var(--r-sm); font-size:11px; font-family:inherit;
+  color:var(--on-surface); background:rgba(255,255,255,.7);
+}
+.d-inp:focus { outline:none; border-color:var(--secondary) }
+.sb-sep { width:1px; height:18px; background:rgba(169,180,185,.3); margin:0 4px }
+.lbtn {
+  display:inline-flex; align-items:center; gap:4px; padding:4px 10px;
+  border:1px solid rgba(169,180,185,.25); border-radius:var(--r-sm);
+  cursor:pointer; font-size:11px; font-weight:700; font-family:inherit;
+  background:rgba(255,255,255,.7); color:var(--outline); transition:all .14s;
+}
+.lbtn.on { background:#fff8e1; border-color:var(--amber); color:var(--amber) }
+
+/* ═══════════════════════════════════════════════════
+   GANTT SECTION
+═══════════════════════════════════════════════════ */
+.gantt-section { display:flex; flex:1; overflow:hidden; min-height:0 }
+
+/* LEFT */
+.g-left {
+  width:var(--left-w); min-width:260px; background:var(--s-lowest);
+  display:flex; flex-direction:column; overflow:hidden; flex-shrink:0;
+  box-shadow:2px 0 8px rgba(42,52,57,.04); position:relative; z-index:10;
+  transition:none;
+}
+.lhdr {
+  height:52px; background:var(--s-high);
+  display:flex; align-items:flex-end;
+  font-size:10px; font-weight:700;
+  color:var(--on-surface-v); letter-spacing:.5px; text-transform:uppercase; flex-shrink:0;
+  overflow:hidden;
+}
+.lhdr > div { padding:10px 10px 8px; text-align:center; flex-shrink:0; overflow:hidden; }
+.lhdr .lh-drag  { width:32px; }
+.lhdr .lh-name  { flex:1; min-width:80px; text-align:left; }
+.lhdr .lh-org   { width:120px; }
+.lhdr .lh-start { width:72px; }
+.lhdr .lh-end   { width:72px; }
+.lhdr .lh-prog  { width:64px; }
+.t-scroll { flex:1; overflow-y:auto; overflow-x:hidden }
+
+.t-row {
+  display:flex;
+  height:var(--row-h);
+  border-bottom:1px solid rgba(169,180,185,.12);
+  cursor:pointer; transition:background .12s,opacity .15s; position:relative;
+  overflow:hidden;
+}
+.t-row .c-no { width:32px; flex-shrink:0; }
+.t-row .c-nm { flex:1; min-width:80px; overflow:hidden; }
+.t-row .c-co { width:120px; flex-shrink:0; }
+.t-row .c-dt { width:72px; flex-shrink:0; }
+.t-row .c-pr { width:64px; flex-shrink:0; }
+.t-row:hover { background:var(--s-low) }
+.t-row:nth-child(even) { background:rgba(240,244,247,.4) }
+.t-row:nth-child(even):hover { background:var(--s-low) }
+.t-row::before {
+  content:''; position:absolute; left:0; top:6px; bottom:6px;
+  width:3px; border-radius:0 2px 2px 0; background:var(--secondary);
+  opacity:0; transition:opacity .14s;
+}
+.t-row:hover::before { opacity:1 }
+.t-row.dragging { opacity:.25; background:var(--s-low) }
+.t-row.drag-over-top::after,.t-row.drag-over-bottom::after {
+  content:''; position:absolute; left:0; right:0; height:2px;
+  background:var(--secondary); box-shadow:0 0 6px rgba(0,91,196,.3);
+  z-index:10; pointer-events:none;
+}
+.t-row.drag-over-top::after { top:-1px }
+.t-row.drag-over-bottom::after { bottom:-1px }
+.t-row.drag-over-child {
+  background:rgba(0,91,196,.08) !important;
+  box-shadow:inset 0 0 0 2px var(--secondary);
+  border-radius:4px;
+}
+.drag-handle {
+  display:flex; align-items:center; justify-content:center;
+  width:100%; height:100%; cursor:grab; color:var(--outline-v);
+  font-size:12px; opacity:0; transition:opacity .14s; user-select:none;
+}
+.t-row:hover .drag-handle { opacity:1 }
+.drag-handle:active { cursor:grabbing }
+.t-row > div {
+  padding:4px 10px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;
+  height:100%; display:flex; align-items:center; font-size:calc(var(--fs-base) - 1px);
+}
+.c-no { justify-content:center; color:var(--outline-v); font-size:11px; font-weight:700; font-family:'JetBrains Mono',monospace }
+.c-nm { gap:8px; font-weight:600; color:var(--on-surface) }
+.c-nm-in { overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+.c-swatch { width:9px; height:9px; border-radius:2px; flex-shrink:0 }
+.c-co { flex-direction:column; align-items:flex-start; justify-content:center; gap:1px }
+.c-co .co { font-size:11px; font-weight:600; width:100%; overflow:hidden; text-overflow:ellipsis }
+.c-co .pe { font-size:10px; color:var(--outline); width:100%; overflow:hidden; text-overflow:ellipsis }
+.c-dt { justify-content:center; font-size:11px; color:var(--on-surface-v); font-variant-numeric:tabular-nums }
+.c-pr { justify-content:center }
+.pr-badge { font-size:10px; font-weight:700; padding:2px 8px; border-radius:var(--r-sm); color:white }
+
+.empty-msg { padding:60px 20px; text-align:center; color:var(--outline-v) }
+.empty-msg .e-ico { font-size:40px; margin-bottom:12px; opacity:.4 }
+.empty-msg p { font-size:var(--fs-base); line-height:2; font-weight:500 }
+
+/* RIGHT */
+.g-right { flex:1; overflow:auto; position:relative; background:var(--bg) }
+.chart-wrap { display:inline-block; vertical-align:top; min-width:100%; background:var(--s-lowest) }
+.tl-hdr { position:sticky; top:0; z-index:40; background:var(--s-low); border-bottom:1px solid rgba(169,180,185,.15) }
+.m-row { display:flex; height:24px }
+.m-cell {
+  display:flex; align-items:center; font-size:10px; font-weight:800;
+  color:var(--on-surface-v); letter-spacing:.8px; text-transform:uppercase;
+  padding:0 12px; border-right:1px solid rgba(169,180,185,.1);
+  flex-shrink:0; overflow:hidden; font-family:'Manrope',sans-serif;
+}
+.d-row { display:flex; height:28px }
+.d-cell {
+  width:var(--day-w); min-width:var(--day-w); flex-shrink:0;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  font-size:9px; gap:1px; border-right:1px solid rgba(169,180,185,.1);
+}
+.d-cell .dn { font-weight:700; color:var(--on-surface); font-variant-numeric:tabular-nums }
+.d-cell .dw { font-size:7.5px; color:var(--outline-v) }
+.d-cell.sat { background:rgba(216,226,255,.35) }
+.d-cell.sat .dw { color:var(--secondary) }
+.d-cell.sun { background:rgba(254,137,131,.12) }
+.d-cell.sun .dn,.d-cell.sun .dw { color:var(--red) }
+.d-cell.hol { background:rgba(254,137,131,.12) }
+.d-cell.hol .dn,.d-cell.hol .dw { color:var(--red) }
+.d-cell.tod { background:rgba(218,226,253,.45) !important }
+.d-cell.tod .dn { color:var(--secondary); font-weight:900 }
+.ch-rows { position:relative }
+.ch-row {
+  display:flex; height:var(--row-h);
+  border-bottom:1px solid rgba(169,180,185,.08); position:relative;
+}
+.ch-row:nth-child(even) { background:rgba(240,244,247,.5) }
+.g-cell { width:var(--day-w); min-width:var(--day-w); flex-shrink:0; height:100%; border-right:1px solid rgba(169,180,185,.06) }
+.g-cell.sat { background:rgba(216,226,255,.2) }
+.g-cell.sun,.g-cell.hol { background:rgba(254,137,131,.07) }
+.g-cell.tod { background:rgba(218,226,253,.25) !important }
+
+.bars-lyr { position:absolute; inset:0; pointer-events:none }
+.t-bar {
+  position:absolute; height:28px; top:8px; border-radius:var(--r-sm);
+  pointer-events:all; cursor:pointer; display:flex; align-items:center;
+  transition:transform .12s, filter .12s; overflow:hidden;
+}
+.t-bar:hover { transform:translateY(-1px); filter:brightness(1.1); z-index:10 }
+/* バー背景（薄色）*/
+.bar-bg   { position:absolute; inset:0; opacity:.22; }
+/* 進捗塗り（タスクカラー100%）*/
+.bar-fill { position:absolute; left:0; top:0; bottom:0; border-radius:var(--r-sm) 0 0 var(--r-sm); min-width:0; }
+.bar-fill.full { border-radius:var(--r-sm); }
+/* テキスト：常に濃色で読みやすく */
+.bar-txt {
+  position:relative; z-index:5;
+  font-size:10px; font-weight:700; font-family:'Manrope',sans-serif;
+  padding:0 8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  color:#1a2740;
+}
+
+.tod-line {
+  position:absolute; top:0; bottom:0; width:2px;
+  background:var(--secondary); z-index:30; pointer-events:none;
+}
+.tod-line::before {
+  content:attr(data-lbl);
+  position:absolute; top:0; left:50%; transform:translateX(-50%);
+  background:var(--secondary); color:white;
+  font-size:9px; font-weight:700; font-family:'Manrope',sans-serif;
+  padding:2px 5px; border-radius:0 0 3px 3px; white-space:nowrap;
+}
+.lsvg { position:absolute; top:0; left:0; pointer-events:none; z-index:32; overflow:visible }
+
+/* ═══════════════════════════════════════════════════
+   BOTTOM SECTION
+═══════════════════════════════════════════════════ */
+.v-resizer {
+  height:10px; flex-shrink:0; cursor:row-resize;
+  background:var(--s-high); transition:background .15s;
+  position:relative; z-index:20;
+  display:flex; align-items:center; justify-content:center;
+  border-top:1px solid rgba(169,180,185,.25);
+}
+.v-resizer:hover, .v-resizer.dragging { background:var(--primary-fixed); }
+.v-resizer::before {
+  content:'';
+  width:40px; height:3px; border-radius:2px;
+  background:rgba(113,124,130,.4);
+  transition:background .15s, width .15s;
+}
+.v-resizer:hover::before, .v-resizer.dragging::before {
+  background:var(--secondary); width:60px;
+}
+.v-resizer::after { content:''; position:absolute; top:-6px; bottom:-6px; left:0; right:0; }
+.bottom-section {
+  height:var(--bottom-h); flex-shrink:0;
+  display:grid; grid-template-columns:1fr 280px; gap:0;
+  border-top:none;
+  background:var(--bg); overflow:hidden; min-height:60px;
+}
+.activity-log { padding:14px 22px; display:flex; flex-direction:column; overflow:hidden }
+.al-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; flex-shrink:0 }
+.al-title {
+  font-family:'Manrope',sans-serif; font-size:13px; font-weight:800;
+  color:var(--on-surface); display:flex; align-items:center; gap:6px;
+}
+.al-title .mi { font-size:16px; color:var(--primary) }
+.al-list { flex:1; overflow-y:auto; display:flex; flex-direction:column; gap:2px }
+.al-item {
+  display:flex; align-items:flex-start; gap:10px; padding:6px 10px;
+  border-radius:var(--r-md); background:var(--s-lowest); transition:background .12s;
+}
+.al-item:hover { background:var(--s-low) }
+.al-time { font-size:10px; font-weight:700; color:var(--outline-v); white-space:nowrap; margin-top:1px; min-width:36px; font-variant-numeric:tabular-nums }
+.al-text { font-size:calc(var(--fs-base) - 1px); color:var(--on-surface); line-height:1.5 }
+.al-text .hl { color:var(--secondary); font-weight:600 }
+.al-text strong { font-weight:700 }
+
+/* ── Project Health (固定・見やすく) ─── */
+.project-health {
+  background: var(--primary);
+  padding:20px 22px;
+  display:flex; flex-direction:column; justify-content:space-between;
+  position:relative; overflow:hidden;
+}
+.project-health::before {
+  content:'analytics'; font-family:'Material Symbols Outlined';
+  position:absolute; right:-16px; bottom:-16px;
+  font-size:120px; color:rgba(255,255,255,.06); line-height:1; pointer-events:none;
+}
+.ph-label {
+  font-size:9px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase;
+  color:rgba(255,255,255,.65); font-family:'Manrope',sans-serif;
+}
+.ph-status {
+  font-family:'Manrope',sans-serif; font-size:24px; font-weight:800;
+  color:white; margin-top:4px; letter-spacing:-.5px;
+}
+.ph-mid {
+  display:flex; align-items:center; justify-content:center;
+  margin:8px 0;
+}
+/* Large circular progress */
+.ph-ring-wrap { position:relative; width:80px; height:80px }
+.ph-ring-bg { fill:none; stroke:rgba(255,255,255,.18); stroke-width:7 }
+.ph-ring-fill {
+  fill:none; stroke:rgba(105,246,184,.85); stroke-width:7;
+  stroke-linecap:round;
+  transform:rotate(-90deg); transform-origin:50% 50%;
+  transition:stroke-dasharray .6s ease;
+}
+.ph-ring-txt {
+  position:absolute; inset:0; display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+}
+.ph-pct-big { font-family:'Manrope',sans-serif; font-size:20px; font-weight:800; color:white; line-height:1 }
+.ph-pct-sub { font-size:9px; color:rgba(255,255,255,.6); font-weight:700; margin-top:1px }
+/* Stat row */
+.ph-stats { display:flex; gap:12px }
+.ph-stat { display:flex; flex-direction:column; align-items:center; gap:2px }
+.ph-stat-val { font-family:'Manrope',sans-serif; font-size:16px; font-weight:800; color:white; line-height:1 }
+.ph-stat-lbl { font-size:8px; color:rgba(255,255,255,.55); font-weight:700; letter-spacing:.5px; text-transform:uppercase }
+
+/* ═══════════════════════════════════════════════════
+   MODAL SYSTEM
+═══════════════════════════════════════════════════ */
+.overlay {
+  position:fixed; inset:0;
+  background:rgba(42,52,57,.4); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+  z-index:2500; display:flex; align-items:center; justify-content:center;
+  opacity:0; visibility:hidden; transition:opacity .2s, visibility .2s;
+}
+.overlay.show { opacity:1; visibility:visible }
+.modal {
+  background:rgba(255,255,255,.94); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+  border-radius:var(--r-xl); width:540px; max-width:95vw; max-height:92vh;
+  overflow-y:auto;
+  box-shadow:0 8px 40px rgba(42,52,57,.16), 0 0 0 1px rgba(169,180,185,.15);
+  transform:translateY(12px); transition:transform .2s ease;
+}
+.overlay.show .modal { transform:none }
+.m-hdr {
+  padding:18px 22px 14px; border-bottom:1px solid rgba(169,180,185,.12);
+  display:flex; align-items:center; justify-content:space-between;
+  background:var(--s-low); border-radius:var(--r-xl) var(--r-xl) 0 0;
+}
+.m-title {
+  font-family:'Manrope',sans-serif; font-size:15px; font-weight:800;
+  color:var(--on-surface); display:flex; align-items:center; gap:8px;
+}
+.m-close {
+  width:28px; height:28px; border-radius:var(--r-sm);
+  border:1px solid rgba(169,180,185,.2); background:white; cursor:pointer;
+  font-size:12px; color:var(--outline); display:flex; align-items:center; justify-content:center;
+  transition:all .12s;
+}
+.m-close:hover { background:var(--s-high); color:var(--on-surface) }
+.m-body { padding:20px 22px }
+.m-foot {
+  padding:12px 22px; border-top:1px solid rgba(169,180,185,.12);
+  display:flex; justify-content:flex-end; gap:8px;
+  background:var(--s-low); border-radius:0 0 var(--r-xl) var(--r-xl);
+}
+.fg-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px }
+.fg-full { grid-column:1/-1 }
+.fg { display:flex; flex-direction:column; gap:5px }
+.fg label { font-size:10px; font-weight:700; color:var(--outline); letter-spacing:.6px; text-transform:uppercase }
+.fg input {
+  padding:8px 11px; border:1px solid rgba(169,180,185,.3); border-radius:var(--r-sm);
+  font-size:var(--fs-base); font-family:inherit; color:var(--on-surface); background:white;
+  transition:border-color .14s, box-shadow .14s;
+}
+.fg input:focus { outline:none; border-color:var(--secondary); box-shadow:0 0 0 3px rgba(0,91,196,.1) }
+.range-row { display:flex; align-items:center; gap:12px }
+.range-row input[type=range] {
+  flex:1; -webkit-appearance:none; height:4px; border-radius:4px;
+  background:var(--s-high); border:none; padding:0;
+}
+.range-row input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance:none; width:16px; height:16px; border-radius:50%;
+  background:var(--secondary); cursor:pointer; border:2px solid white;
+  box-shadow:0 1px 4px rgba(0,91,196,.3);
+}
+.rv { font-size:15px; font-weight:800; color:var(--secondary); min-width:40px; text-align:right; font-family:'Manrope',sans-serif }
+.cpks { display:flex; gap:8px; flex-wrap:wrap }
+.cpk { width:26px; height:26px; border-radius:var(--r-sm); cursor:pointer; border:2px solid transparent; transition:transform .14s, border-color .14s }
+.cpk:hover { transform:scale(1.2) }
+.cpk.sel { border-color:var(--on-surface); transform:scale(1.08) }
+.co-hint { display:flex; flex-wrap:wrap; gap:5px; margin-top:4px }
+.co-tag {
+  display:inline-flex; align-items:center; gap:4px; padding:2px 8px;
+  border-radius:var(--r-sm); font-size:10px; font-weight:700;
+  background:var(--primary-cont); color:var(--primary);
+  cursor:pointer; border:1px solid transparent; transition:all .12s;
+}
+.co-tag:hover { border-color:var(--primary) }
+.co-tag .co-dot { width:6px; height:6px; border-radius:50%; flex-shrink:0 }
+
+/* ═══════════════════════════════════════════════════
+   SETTINGS MODAL
+═══════════════════════════════════════════════════ */
+.settings-section { margin-bottom:22px }
+.settings-section:last-child { margin-bottom:0 }
+.settings-title {
+  font-size:11px; font-weight:800; color:var(--on-surface-v);
+  text-transform:uppercase; letter-spacing:.7px; margin-bottom:10px;
+  padding-bottom:7px; border-bottom:1px solid rgba(169,180,185,.18);
+}
+.toggle-group { display:flex; gap:6px }
+.tog-btn {
+  flex:1; padding:9px; border:1.5px solid rgba(169,180,185,.3);
+  border-radius:var(--r-md); background:white; cursor:pointer;
+  font-family:'Manrope',sans-serif; font-size:12px; font-weight:700;
+  color:var(--on-surface-v); transition:all .14s; text-align:center;
+}
+.tog-btn:hover { border-color:var(--secondary); color:var(--secondary); background:var(--primary-fixed) }
+.tog-btn.active { background:var(--secondary); color:white; border-color:var(--secondary) }
+
+/* ═══════════════════════════════════════════════════
+   HELP MODAL
+═══════════════════════════════════════════════════ */
+.help-section { margin-bottom:20px }
+.help-section h3 {
+  font-family:'Manrope',sans-serif; font-size:13px; font-weight:800;
+  color:var(--on-surface); margin-bottom:10px;
+  padding-bottom:6px; border-bottom:1px solid rgba(169,180,185,.15);
+  display:flex; align-items:center; gap:7px;
+}
+.help-section h3 .mi { font-size:16px; color:var(--secondary) }
+.help-table { width:100%; border-collapse:collapse; font-size:calc(var(--fs-base) - 1px) }
+.help-table th {
+  text-align:left; padding:6px 10px;
+  background:var(--s-low); color:var(--on-surface-v);
+  font-size:10px; font-weight:700; letter-spacing:.4px; text-transform:uppercase;
+}
+.help-table td { padding:8px 10px; border-bottom:1px solid rgba(169,180,185,.1); color:var(--on-surface); vertical-align:top }
+.help-table tr:last-child td { border-bottom:none }
+.help-table td:first-child { font-weight:600; white-space:nowrap; color:var(--secondary); min-width:130px }
+.kbd {
+  display:inline-block; padding:2px 7px; background:var(--s-high);
+  border:1px solid rgba(169,180,185,.4); border-radius:4px;
+  font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600;
+  color:var(--on-surface);
+}
+.help-note {
+  background:rgba(218,226,253,.4); border-left:3px solid var(--secondary);
+  padding:10px 14px; border-radius:0 var(--r-md) var(--r-md) 0;
+  font-size:calc(var(--fs-base) - 1px); color:var(--on-surface-v); margin-top:8px;
+}
+
+/* ═══════════════════════════════════════════════════
+   TOAST
+═══════════════════════════════════════════════════ */
+#toast-area { position:fixed; bottom:24px; right:24px; z-index:9999; display:flex; flex-direction:column; gap:8px }
+.toast {
+  padding:10px 16px 10px 14px; border-radius:var(--r-lg);
+  color:var(--on-surface); background:rgba(255,255,255,.96); backdrop-filter:blur(8px);
+  font-size:12px; font-weight:600;
+  box-shadow:0 4px 18px rgba(42,52,57,.14), 0 0 0 1px rgba(169,180,185,.15);
+  animation:tIn .25s ease, tOut .25s ease 2.75s forwards;
+  display:flex; align-items:center; gap:8px; max-width:300px;
+}
+.toast.ok  { border-left:3px solid var(--tertiary) }
+.toast.err { border-left:3px solid var(--red) }
+.toast.inf { border-left:3px solid var(--secondary) }
+.toast.wrn { border-left:3px solid var(--amber) }
+.toast.vio { border-left:3px solid var(--primary) }
+@keyframes tIn  { from{transform:translateX(110%);opacity:0} to{transform:none;opacity:1} }
+@keyframes tOut { to{opacity:0} }
+
+/* ── Confirm dialog ─── */
+.confirm-msg { font-size:var(--fs-base); color:var(--on-surface); line-height:1.7; padding:4px 0 12px }
+
+/* ═══════════════════════════════════════════════════
+   SITE FOOTER
+═══════════════════════════════════════════════════ */
+.site-footer {
+  background: #f8fafc;
+  border-top: 1px solid var(--border);
+  color: var(--on-surface-v);
+  flex-shrink: 0;
+  padding: 18px 28px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+}
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.footer-logo-img {
+  height: 32px;
+  object-fit: contain;
+  opacity: .85;
+  transition: opacity .15s;
+}
+.footer-logo-img:hover { opacity: 1 }
+.footer-corp-link {
+  color: var(--on-surface-v);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .3px;
+  transition: color .14s;
+}
+.footer-corp-link:hover { color: rgba(255,255,255,.9) }
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 18px;
+}
+.footer-nav-link {
+  color: var(--on-surface-v);
+  text-decoration: none;
+  font-size: 10.5px;
+  font-weight: 500;
+  transition: color .14s;
+  cursor: pointer;
+  border: none; background: none; font-family: inherit;
+}
+.footer-nav-link:hover { color: var(--secondary) }
+.footer-sep { color: var(--border-2) }
+.footer-copy {
+  color: var(--text-3);
+  font-size: 10px;
+  letter-spacing: .3px;
+  text-align: center;
+}
+
+/* ── Page Modals ─── */
+.page-modal {
+  max-width: 700px;
+  width: 95vw;
+}
+.page-body {
+  padding: 24px 26px;
+  font-size: 13px;
+  line-height: 1.85;
+  color: var(--on-surface);
+}
+.page-body h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--on-surface);
+  margin-bottom: 6px;
+  letter-spacing: -.3px;
+}
+.page-body .page-subtitle {
+  color: var(--on-surface-v);
+  font-size: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(169,180,185,.15);
+}
+.page-body h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--on-surface);
+  margin: 20px 0 8px;
+}
+.page-body p { margin-bottom: 10px; color: var(--on-surface-v) }
+.page-body ul { padding-left: 18px; margin-bottom: 10px }
+.page-body ul li { margin-bottom: 4px; color: var(--on-surface-v) }
+.page-body a { color: var(--secondary); text-decoration: none }
+.page-body a:hover { text-decoration: underline }
+.page-body .info-box {
+  background: var(--s-low);
+  border-left: 3px solid var(--secondary);
+  padding: 12px 16px;
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  margin: 12px 0;
+  font-size: 12px;
+  color: var(--on-surface-v);
+}
+.page-body table { width:100%; border-collapse:collapse; margin: 12px 0; font-size: 12px }
+.page-body table th { background: var(--s-high); padding: 8px 12px; text-align: left; font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: .5px; color: var(--on-surface-v) }
+.page-body table td { padding: 9px 12px; border-bottom: 1px solid rgba(169,180,185,.12); color: var(--on-surface-v); vertical-align: top }
+.page-body table td:first-child { font-weight: 600; color: var(--on-surface); white-space: nowrap; min-width: 120px }
+
+/* Contact form */
+.contact-form { display: flex; flex-direction: column; gap: 14px }
+.cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px }
+.cf-field { display: flex; flex-direction: column; gap: 5px }
+.cf-label {
+  font-size: 10px; font-weight: 700;
+  color: var(--outline); letter-spacing: .5px; text-transform: uppercase;
+}
+.cf-label .req { color: var(--red); margin-left: 3px }
+.cf-input, .cf-select, .cf-textarea {
+  padding: 9px 12px;
+  border: 1px solid rgba(169,180,185,.3);
+  border-radius: var(--r-sm);
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--on-surface);
+  background: white;
+  transition: border-color .14s, box-shadow .14s;
+}
+.cf-input:focus, .cf-select:focus, .cf-textarea:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(0,91,196,.08);
+}
+.cf-textarea { resize: vertical; min-height: 110px; line-height: 1.6 }
+.cf-select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%23566166' fill='none' stroke-width='1.5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; padding-right: 28px }
+.cf-check { display: flex; align-items: flex-start; gap: 8px; font-size: 12px; color: var(--on-surface-v); cursor: pointer }
+.cf-check input[type=checkbox] { margin-top: 2px; accent-color: var(--secondary); width: 14px; height: 14px; flex-shrink: 0 }
+.cf-submit {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  padding: 11px 28px; background: linear-gradient(135deg, var(--secondary), #0070e0);
+  color: white; border: none; border-radius: var(--r-md);
+  font-family: 'Manrope', sans-serif; font-size: 13px; font-weight: 800;
+  cursor: pointer; transition: all .15s; align-self: flex-start;
+  box-shadow: 0 2px 8px rgba(0,91,196,.25);
+}
+.cf-submit:hover { box-shadow: 0 4px 14px rgba(0,91,196,.35); transform: translateY(-1px) }
+.cf-submit:active { transform: scale(.97) }
+.cf-note { font-size: 10.5px; color: var(--outline-v); line-height: 1.7 }
+.cf-success {
+  display: none; text-align: center; padding: 32px 20px;
+}
+.cf-success .ok-icon { font-size: 48px; margin-bottom: 10px }
+.cf-success h3 { font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 800; margin-bottom: 8px }
+.cf-success p { color: var(--on-surface-v); font-size: 13px }
+
+/* Blog list */
+.blog-list { display: flex; flex-direction: column; gap: 12px }
+.blog-card {
+  padding: 14px 16px;
+  border-radius: var(--r-md);
+  background: var(--s-low);
+  border: 1px solid rgba(169,180,185,.12);
+  transition: background .12s;
+  cursor: pointer;
+}
+.blog-card:hover { background: var(--primary-fixed) }
+.blog-date { font-size: 10px; color: var(--outline-v); font-weight: 700; margin-bottom: 4px; font-variant-numeric: tabular-nums }
+.blog-title { font-size: 13px; font-weight: 700; color: var(--secondary) }
+.blog-excerpt { font-size: 11.5px; color: var(--on-surface-v); margin-top: 4px; line-height: 1.5 }
+.blog-tag { display: inline-block; padding: 1px 8px; border-radius: 10px; background: var(--primary-fixed); color: var(--primary); font-size: 9px; font-weight: 800; margin-top: 6px }
+
+/* History table */
+.history-entry {
+  display: grid; grid-template-columns: 80px 80px 1fr;
+  gap: 0; border-bottom: 1px solid rgba(169,180,185,.1);
+  padding: 9px 4px; font-size: 12px; align-items: start;
+}
+.history-entry:hover { background: var(--s-low) }
+.history-ver { font-weight: 800; color: var(--secondary); font-family: 'JetBrains Mono', monospace; font-size: 11px }
+.history-date { color: var(--outline); font-size: 11px }
+.history-desc { color: var(--on-surface-v); line-height: 1.6 }
+.history-desc strong { color: var(--on-surface); font-weight: 700 }
+
+/* ── Panel resizer (left ↔ right) ── */
+.g-resizer {
+  width:5px; flex-shrink:0; cursor:col-resize;
+  background:rgba(169,180,185,.15); transition:background .15s;
+  position:relative; z-index:20;
+  display:flex; align-items:center; justify-content:center;
+}
+.g-resizer:hover, .g-resizer.dragging { background:var(--secondary); }
+.g-resizer::after { content:''; position:absolute; left:-6px; right:-6px; top:0; bottom:0; }
+
+/* ── Column resizer (タスク名列 ↔ 組織名列) ── */
+.col-resizer {
+  width:5px; flex-shrink:0; cursor:col-resize;
+  background:rgba(169,180,185,.15); transition:background .15s;
+  position:relative; z-index:20;
+  display:flex; align-items:center; justify-content:center;
+  align-self:stretch;
+}
+.col-resizer:hover, .col-resizer.dragging { background:var(--secondary); }
+.col-resizer::after { content:''; position:absolute; left:-5px; right:-5px; top:0; bottom:0; }
+
+/* ── Hierarchy ── */
+.collapse-btn {
+  display:inline-flex; align-items:center; justify-content:center;
+  width:16px; height:16px; border-radius:3px; border:1px solid rgba(169,180,185,.3);
+  cursor:pointer; font-size:10px; color:var(--on-surface-v);
+  background:rgba(255,255,255,.6); flex-shrink:0; margin-right:3px;
+  transition:transform .15s, background .12s; user-select:none; line-height:1;
+}
+.collapse-btn:hover { background:var(--primary-fixed); color:var(--secondary) }
+.collapse-btn.closed { transform:rotate(-90deg) }
+
+/* ── Promote button (↑ アウトデント) ── */
+.promote-btn {
+  display:none; position:absolute; right:32px; top:50%; transform:translateY(-50%);
+  width:22px; height:22px; border-radius:4px; border:1px dashed rgba(100,116,139,.4);
+  background:rgba(86,94,116,.06); cursor:pointer; font-size:11px; line-height:1;
+  color:var(--on-surface-v); align-items:center; justify-content:center;
+  z-index:5; transition:all .14s; font-weight:700;
+}
+.promote-btn:hover { background:var(--s-high); border-style:solid; color:var(--secondary); }
+.t-row:hover .promote-btn { display:flex; }
+
+/* ── Add-child button (＋) ── */
+.add-child-btn {
+  display:none; position:absolute; right:6px; top:50%; transform:translateY(-50%);
+  width:22px; height:22px; border-radius:4px; border:1px dashed rgba(0,91,196,.35);
+  background:rgba(0,91,196,.06); cursor:pointer; font-size:13px; line-height:1;
+  color:var(--secondary); align-items:center; justify-content:center;
+  z-index:5; transition:all .14s; font-weight:700;
+}
+.add-child-btn:hover { background:var(--primary-fixed); border-style:solid; }
+.t-row:hover .add-child-btn { display:flex; }
+
+/* ── Depth styles ── */
+.depth-0 .c-swatch { width:10px; height:10px; border-radius:3px; }
+.depth-1 .c-nm-in  { font-size:calc(var(--fs-base) - 0.5px); }
+.depth-1 .c-swatch { width:8px; height:8px; border-radius:50%; }
+.depth-2 .c-nm-in  { font-size:calc(var(--fs-base) - 1px); color:var(--on-surface-v); }
+.depth-2 .c-swatch { width:6px; height:6px; border-radius:50%; opacity:.8; }
+
+/* ── Drag & drop tooltip ── */
+.drop-hint {
+  position:fixed; pointer-events:none; z-index:9999;
+  background:#1e3a5f; color:white; font-size:10px; font-weight:700;
+  padding:3px 8px; border-radius:4px; white-space:nowrap; opacity:0;
+  transition:opacity .1s;
+}
+.drop-hint.show { opacity:1; }
+
+/* ═══ Landing Page ═══════════════════════════════════════════ */
+#landing {
+  display:none; position:fixed; inset:0; z-index:2000; overflow-y:auto;
+  flex-direction:column;
+  background:linear-gradient(160deg,#f0f4ff 0%,#e8f0fe 50%,#f7f9fb 100%);
+  font-family:'Inter','Noto Sans JP',sans-serif;
+}
+#landing.show { display:flex; }
+.lp-header {
+  background:rgba(255,255,255,.9); backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(169,180,185,.15);
+  padding:16px 40px; display:flex; align-items:center; gap:12px;
+  position:sticky; top:0; z-index:50;
+}
+.lp-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.lp-logo-text { font-size:22px; font-weight:800; color:#1F4E79; letter-spacing:-.5px; }
+.lp-logo-sub { font-size:12px; color:#566166; }
+.lp-header-actions { margin-left:auto; display:flex; gap:10px; align-items:center; }
+.lp-btn-primary {
+  background:linear-gradient(135deg,#005bc4,#0070e0);
+  color:white; border:none; padding:10px 24px; border-radius:8px;
+  font-size:14px; font-weight:700; cursor:pointer;
+  box-shadow:0 2px 8px rgba(0,91,196,.3); transition:all .15s;
+  font-family:inherit;
+}
+.lp-btn-primary:hover { box-shadow:0 4px 16px rgba(0,91,196,.4); transform:translateY(-1px); }
+.lp-hero {
+  padding:80px 40px 60px; max-width:900px; margin:0 auto; width:100%;
+}
+.lp-badge {
+  display:inline-block; background:#dae2fd; color:#005bc4;
+  padding:4px 14px; border-radius:20px; font-size:12px; font-weight:700;
+  margin-bottom:20px; letter-spacing:.3px;
+}
+.lp-hero h1 {
+  font-size:42px; font-weight:800; line-height:1.2; color:#1a2740;
+  margin:0 0 20px; letter-spacing:-1px;
+}
+.lp-hero h1 em { color:#005bc4; font-style:normal; }
+.lp-hero p {
+  font-size:17px; color:#566166; line-height:1.7; max-width:620px; margin:0 0 32px;
+}
+.lp-cta-area { display:flex; gap:12px; flex-wrap:wrap; }
+.lp-btn-secondary {
+  background:white; color:#005bc4; border:1.5px solid #005bc4;
+  padding:10px 24px; border-radius:8px; font-size:14px; font-weight:700;
+  cursor:pointer; transition:all .15s; font-family:inherit;
+}
+.lp-btn-secondary:hover { background:#f0f4ff; }
+.lp-features {
+  padding:60px 40px; max-width:900px; margin:0 auto; width:100%;
+}
+.lp-features h2 {
+  font-size:28px; font-weight:800; color:#1a2740; margin:0 0 8px; letter-spacing:-.5px;
+}
+.lp-features-subtitle { color:#566166; margin:0 0 36px; font-size:15px; }
+.lp-feat-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px;
+}
+.lp-feat-card {
+  background:white; border-radius:12px; padding:24px;
+  box-shadow:0 2px 12px rgba(0,0,0,.06); border:1px solid rgba(169,180,185,.12);
+}
+.lp-feat-icon { font-size:28px; margin-bottom:12px; }
+.lp-feat-title { font-size:15px; font-weight:700; color:#1a2740; margin:0 0 8px; }
+.lp-feat-desc { font-size:13px; color:#566166; line-height:1.6; margin:0; }
+.lp-howto {
+  background:white; padding:60px 40px;
+}
+.lp-howto-inner { max-width:900px; margin:0 auto; }
+.lp-howto h2 { font-size:28px; font-weight:800; color:#1a2740; margin:0 0 36px; letter-spacing:-.5px; }
+.lp-steps { display:flex; flex-direction:column; gap:24px; }
+.lp-step { display:flex; gap:20px; align-items:flex-start; }
+.lp-step-num {
+  width:36px; height:36px; border-radius:50%; background:#005bc4; color:white;
+  font-size:14px; font-weight:800; display:flex; align-items:center;
+  justify-content:center; flex-shrink:0; margin-top:2px;
+}
+.lp-step-title { font-size:15px; font-weight:700; color:#1a2740; margin:0 0 4px; }
+.lp-step-desc { font-size:13px; color:#566166; line-height:1.6; margin:0; }
+.lp-usecase {
+  padding:60px 40px; max-width:900px; margin:0 auto; width:100%;
+}
+.lp-usecase h2 { font-size:28px; font-weight:800; color:#1a2740; margin:0 0 8px; letter-spacing:-.5px; }
+.lp-usecase-subtitle { color:#566166; margin:0 0 36px; font-size:15px; }
+.lp-usecase-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px;
+}
+.lp-usecase-card {
+  background:white; border-radius:10px; padding:20px;
+  border:1px solid rgba(169,180,185,.15); box-shadow:0 1px 6px rgba(0,0,0,.04);
+}
+.lp-usecase-tag {
+  display:inline-block; background:#e8f5e9; color:#006d4a;
+  padding:2px 10px; border-radius:10px; font-size:10px; font-weight:700;
+  margin-bottom:10px;
+}
+.lp-usecase-title { font-size:14px; font-weight:700; color:#1a2740; margin:0 0 6px; }
+.lp-usecase-desc { font-size:12px; color:#566166; line-height:1.6; margin:0; }
+.lp-faq-lp {
+  background:#f0f4ff; padding:60px 40px;
+}
+.lp-faq-inner { max-width:900px; margin:0 auto; }
+.lp-faq-inner h2 { font-size:28px; font-weight:800; color:#1a2740; margin:0 0 32px; letter-spacing:-.5px; }
+.lp-faq-item { background:white; border-radius:10px; padding:20px 24px; margin-bottom:12px;
+  box-shadow:0 1px 4px rgba(0,0,0,.05); }
+.lp-faq-q { font-size:14px; font-weight:700; color:#1a2740; margin:0 0 8px; }
+.lp-faq-a { font-size:13px; color:#566166; line-height:1.7; margin:0; }
+.lp-footer {
+  background:#1a2740; color:#94a3b8; padding:32px 40px;
+  font-size:12px; text-align:center; line-height:1.8;
+}
+.lp-footer a { color:#60a5fa; text-decoration:none; }
+.lp-footer a:hover { text-decoration:underline; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ランディングページ（?p= なしでアクセス時のみ表示）
+     Googlebot はここを読む → AdSense 審査対応
+═══════════════════════════════════════════════════════════ -->
+<div id="landing">
+  <!-- Header -->
+  <header class="lp-header">
+    <div class="lp-logo">
+      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB4PSI0IiB5PSI2IiB3aWR0aD0iMTYiIGhlaWdodD0iNCIgZmlsbD0iIzAwOTFEQSIgcng9IjIiLz48cmVjdCB4PSI0IiB5PSIxNCIgd2lkdGg9IjExIiBoZWlnaHQ9IjQiIGZpbGw9IiNGRjkxMDAiIHJ4PSIyIi8+PHJlY3QgeD0iNCIgeT0iMjIiIHdpZHRoPSI4IiBoZWlnaHQ9IjQiIGZpbGw9IiNGRjU3MjIiIHJ4PSIyIi8+PGNpcmNsZSBjeD0iMjIiIGN5PSIxNiIgcj0iMyIgZmlsbD0iI0ZGOTEwMCIgc3Ryb2tlPSIjMDAzQTVEIiBzdHJva2Utd2lkdGg9IjEuNSIvPjwvc3ZnPg==" alt="ガンちゃん" width="32" height="32">
+      <div>
+        <div class="lp-logo-text">ガンちゃん</div>
+        <div class="lp-logo-sub">無料Webガントチャートツール</div>
+      </div>
+    </div>
+    <div class="lp-header-actions">
+      <button class="lp-btn-primary" onclick="startApp()">無料で使う →</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="lp-hero">
+    <div class="lp-badge">✨ ログイン不要・完全無料</div>
+    <h1>ブラウザだけで使える<br><em>無料ガントチャート</em></h1>
+    <p>インストール不要、アカウント登録不要。URLを共有するだけでチームでプロジェクト管理ができます。タスクの階層管理・イナズマ線による進捗可視化・担当者管理など、実務で必要な機能をシンプルに提供します。</p>
+    <div class="lp-cta-area">
+      <button class="lp-btn-primary" onclick="startApp()">今すぐ無料で使う</button>
+      <button class="lp-btn-secondary" onclick="document.getElementById('lp-features').scrollIntoView({behavior:'smooth'})">機能を見る</button>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="lp-features" id="lp-features">
+    <h2>ガンちゃんの主な機能</h2>
+    <p class="lp-features-subtitle">プロジェクト管理に必要な機能を、シンプルかつ直感的に提供します</p>
+    <div class="lp-feat-grid">
+      <div class="lp-feat-card">
+        <div class="lp-feat-icon">📊</div>
+        <p class="lp-feat-title">ガントチャート表示</p>
+        <p class="lp-feat-desc">タスクの開始日・終了日・進捗率をバーグラフで視覚化。土日祝日は自動で色分け表示されます。</p>
+      </div>
+      <div class="lp-feat-card">
+        <div class="lp-feat-icon">⚡</div>
+        <p class="lp-feat-title">イナズマ線</p>
+        <p class="lp-feat-desc">基準日時点での計画進捗と実績のズレを折れ線で可視化。遅延タスクを一目で把握できます。</p>
+      </div>
+      <div class="lp-feat-card">
+        <div class="lp-feat-icon">🌲</div>
+        <p class="lp-feat-title">親子タスク管理</p>
+        <p class="lp-feat-desc">タスクを階層化して整理できます。ドラッグ＆ドロップで親子関係を設定。折りたたみ表示にも対応。</p>
+      </div>
+      <div class="lp-feat-card">
+        <div class="lp-feat-icon">🔗</div>
+        <p class="lp-feat-title">URLで共有</p>
+        <p class="lp-feat-desc">プロジェクトURLをコピーしてメールやチャットで共有するだけ。相手もログインなしで閲覧・編集できます。</p>
+      </div>
+      <div class="lp-feat-card">
+        <div class="lp-feat-icon">👥</div>
+        <p class="lp-feat-title">担当者・組織管理</p>
+        <p class="lp-feat-desc">各タスクに担当者名・組織名を登録可能。同一組織のタスクは自動で同じ色に統一されます。</p>
+      </div>
+      <div class="lp-feat-card">
+        <div class="lp-feat-icon">💾</div>
+        <p class="lp-feat-title">クラウド自動保存</p>
+        <p class="lp-feat-desc">「保存」ボタンひとつでサーバーに保存。URLを知っていれば、いつでもどこからでもアクセス可能です。</p>
+      </div>
+      <div class="lp-feat-card">
+        <div class="lp-feat-icon">📱</div>
+        <p class="lp-feat-title">マルチデバイス対応</p>
+        <p class="lp-feat-desc">PC・タブレット・スマートフォンのブラウザから利用可能。インストール不要でどのデバイスでもすぐ使えます。</p>
+      </div>
+      <div class="lp-feat-card">
+        <div class="lp-feat-icon">🏖️</div>
+        <p class="lp-feat-title">祝日自動取得</p>
+        <p class="lp-feat-desc">日本の祝日データを自動で取得してガントチャートに反映。土日と祝日を色分け表示するため、実働日数が一目でわかります。</p>
+      </div>
+      <div class="lp-feat-card">
+        <div class="lp-feat-icon">🆓</div>
+        <p class="lp-feat-title">完全無料</p>
+        <p class="lp-feat-desc">利用料金は一切かかりません。アカウント登録・クレジットカード登録も不要。今すぐブラウザで始められます。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to use -->
+  <section class="lp-howto">
+    <div class="lp-howto-inner">
+      <h2>ガンちゃんの使い方</h2>
+      <div class="lp-steps">
+        <div class="lp-step">
+          <div class="lp-step-num">1</div>
+          <div>
+            <p class="lp-step-title">「今すぐ無料で使う」をクリック</p>
+            <p class="lp-step-desc">ボタンをクリックすると、新しいプロジェクトが自動で作成されます。ログインやアカウント登録は一切不要です。すぐにタスク入力を始められます。</p>
+          </div>
+        </div>
+        <div class="lp-step">
+          <div class="lp-step-num">2</div>
+          <div>
+            <p class="lp-step-title">タスクを追加する</p>
+            <p class="lp-step-desc">「＋ タスクを追加」ボタンからタスクを登録します。タスク名・担当者・組織名・開始日・終了日・進捗率を入力するだけで、ガントチャートに反映されます。タスクは親子関係を設定して階層化できます。</p>
+          </div>
+        </div>
+        <div class="lp-step">
+          <div class="lp-step-num">3</div>
+          <div>
+            <p class="lp-step-title">保存してURLを共有</p>
+            <p class="lp-step-desc">「保存」ボタンでプロジェクトを保存。「プロジェクト共有」ボタンでURLをコピーして、チームメンバーに送るだけで共同作業を始められます。</p>
+          </div>
+        </div>
+        <div class="lp-step">
+          <div class="lp-step-num">4</div>
+          <div>
+            <p class="lp-step-title">進捗を管理する</p>
+            <p class="lp-step-desc">タスクの進捗率を随時更新していくと、ガントチャートのバーが自動で更新されます。「イナズマ線」機能を使えば、計画と実績のズレを視覚的に把握することができます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use cases -->
+  <section class="lp-usecase">
+    <h2>こんなシーンで使われています</h2>
+    <p class="lp-usecase-subtitle">業種・規模を問わずご活用いただけます</p>
+    <div class="lp-usecase-grid">
+      <div class="lp-usecase-card">
+        <span class="lp-usecase-tag">制作会社・広告代理店</span>
+        <p class="lp-usecase-title">Webサイト・LP制作のスケジュール管理</p>
+        <p class="lp-usecase-desc">デザイン・コーディング・テスト・納品などのフェーズをタスク化し、クライアントとURLを共有して進捗報告。</p>
+      </div>
+      <div class="lp-usecase-card">
+        <span class="lp-usecase-tag">IT・システム開発</span>
+        <p class="lp-usecase-title">開発フェーズのスプリント管理</p>
+        <p class="lp-usecase-desc">要件定義・設計・実装・テスト・リリースを親子タスクで整理。イナズマ線で遅延を早期発見。</p>
+      </div>
+      <div class="lp-usecase-card">
+        <span class="lp-usecase-tag">イベント・式典</span>
+        <p class="lp-usecase-title">展示会・セミナーの準備スケジュール</p>
+        <p class="lp-usecase-desc">会場手配・資料作成・告知・当日運営など多岐にわたる準備タスクを一元管理。</p>
+      </div>
+      <div class="lp-usecase-card">
+        <span class="lp-usecase-tag">建設・リフォーム</span>
+        <p class="lp-usecase-title">施工スケジュールの可視化</p>
+        <p class="lp-usecase-desc">職人・業者ごとの担当作業を色分けで管理。工程の遅れをイナズマ線ですぐに把握。</p>
+      </div>
+      <div class="lp-usecase-card">
+        <span class="lp-usecase-tag">学校・研究機関</span>
+        <p class="lp-usecase-title">研究・卒論・プロジェクトの進捗管理</p>
+        <p class="lp-usecase-desc">実験・執筆・校正・提出などの締め切りをガントチャートで可視化。ゼミ単位で共有も可能。</p>
+      </div>
+      <div class="lp-usecase-card">
+        <span class="lp-usecase-tag">個人・フリーランス</span>
+        <p class="lp-usecase-title">複数案件の並行管理</p>
+        <p class="lp-usecase-desc">複数クライアントの案件を別々のプロジェクトとして管理。URLで各クライアントと進捗を共有。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="lp-faq-lp">
+    <div class="lp-faq-inner">
+      <h2>よくある質問</h2>
+      <div class="lp-faq-item">
+        <p class="lp-faq-q">Q. 本当に無料ですか？</p>
+        <p class="lp-faq-a">はい、ガンちゃんは完全無料でご利用いただけます。アカウント登録・クレジットカード登録は一切不要です。商用利用も無料でお使いいただけます。</p>
+      </div>
+      <div class="lp-faq-item">
+        <p class="lp-faq-q">Q. 何人まで利用できますか？</p>
+        <p class="lp-faq-a">人数制限はありません。プロジェクトのURLを知っている全員がアクセス・編集できます。大人数のチームでもご活用いただけます。</p>
+      </div>
+      <div class="lp-faq-item">
+        <p class="lp-faq-q">Q. データはどこに保存されますか？</p>
+        <p class="lp-faq-a">データはガンちゃんのサーバー（ganchan.online）に保存されます。プロジェクトごとに固有のURLが生成され、そのURLを知っている人だけがアクセスできます。</p>
+      </div>
+      <div class="lp-faq-item">
+        <p class="lp-faq-q">Q. エクセルやPowerPointに書き出せますか？</p>
+        <p class="lp-faq-a">現在は直接エクスポートする機能はありませんが、ブラウザの印刷機能でPDF化することができます。今後のアップデートでエクスポート機能の追加を予定しています。</p>
+      </div>
+      <div class="lp-faq-item">
+        <p class="lp-faq-q">Q. スマートフォンでも使えますか？</p>
+        <p class="lp-faq-a">はい、スマートフォン・タブレットのブラウザからもご利用いただけます。ただし、ガントチャートの性質上、PCでの利用を推奨しています。</p>
+      </div>
+      <div class="lp-faq-item">
+        <p class="lp-faq-q">Q. イナズマ線とは何ですか？</p>
+        <p class="lp-faq-a">イナズマ線とは、工程管理で使われる進捗管理手法です。基準日時点での「計画上の進捗点」を各タスクのバー上に記し、それを線で結ぶことで、全体の遅延・前倒し状況をジグザグ（イナズマ）の線として視覚的に表現します。</p>
+      </div>
+      <div class="lp-faq-item">
+        <p class="lp-faq-q">Q. 複数のプロジェクトを管理できますか？</p>
+        <p class="lp-faq-a">はい、「新規プロジェクト」ボタンから新しいプロジェクトを作成できます。各プロジェクトは固有のURLで管理されるため、複数のプロジェクトをURLで使い分けることができます。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <nav class="footer-nav">
+      <button class="footer-nav-link" onclick="sm('page-about')">このサイトについて</button>
+      <span class="footer-sep">|</span>
+      <button class="footer-nav-link" onclick="sm('help-modal')">ガンちゃんの使い方</button>
+      <span class="footer-sep">|</span>
+      <button class="footer-nav-link" onclick="sm('page-faq')">よくある質問</button>
+      <span class="footer-sep">|</span>
+      <button class="footer-nav-link" onclick="sm('page-blog')">ブログ</button>
+      <span class="footer-sep">|</span>
+      <button class="footer-nav-link" onclick="openContact()">お問い合わせ</button>
+      <span class="footer-sep">|</span>
+      <button class="footer-nav-link" onclick="sm('page-terms')">利用規約</button>
+      <span class="footer-sep">|</span>
+      <button class="footer-nav-link" onclick="sm('page-history')">更新履歴</button>
+      <span class="footer-sep">|</span>
+      <button class="footer-nav-link" onclick="sm('page-privacy')">個人情報保護方針</button>
+    </nav>
+    <div class="footer-copy">ガンちゃん Copyright &copy; 2026 株式会社好循環 All Rights Reserved.</div>
+  </footer>
+</div>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WX5LLMKS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- ══════════════ SIDEBAR ══════════════ -->
+<aside class="sidebar">
+  <div class="sb-logo" style="width:56px;height:56px;padding:4px;cursor:pointer" onclick="goHome()" title="ガンちゃん トップへ">
+    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDIwMCAxNTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3QgeD0iMjAiIHk9IjIwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyIiBmaWxsPSIjMDA5MURBIiByeD0iNCIvPgogIDxyZWN0IHg9IjIwIiB5PSI0NSIgd2lkdGg9IjgwIiBoZWlnaHQ9IjEyIiBmaWxsPSIjRkY5MTAwIiByeD0iNCIvPgogIDxyZWN0IHg9IjIwIiB5PSI3MCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjEyIiBmaWxsPSIjMDA5MURBIiByeD0iNCIvPgogIDxyZWN0IHg9IjIwIiB5PSI5NSIgd2lkdGg9IjYwIiBoZWlnaHQ9IjEyIiBmaWxsPSIjRkY1NzIyIiByeD0iNCIvPgogIDxjaXJjbGUgY3g9IjEwMCIgY3k9Ijg1IiByPSI1IiBmaWxsPSIjRkY5MTAwIiBzdHJva2U9IiMwMDNBNUQiIHN0cm9rZS13aWR0aD0iMiIvPgogIDx0ZXh0IHg9IjIwIiB5PSIxMzUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCIgZm9udC1zaXplPSIyNCI+44Ks44Oz44Gh44KD44KTPC90ZXh0PgogIDx0ZXh0IHg9IjUwIiB5PSIxNTAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIj5HYW4tY2hhbjwvdGV4dD4KPC9zdmc+Cg==" alt="ガンちゃん" style="width:100%;height:100%;object-fit:contain">
+  </div>
+  <nav class="sb-nav">
+    <button class="sb-item" onclick="sm('settings-modal')" id="sb-settings">
+      <span class="mi">settings</span>
+      <span class="label" data-i18n="settings">設定</span>
+    </button>
+  </nav>
+  <div class="sb-bottom">
+    <button class="sb-item" onclick="sm('help-modal')" id="sb-help">
+      <span class="mi">help</span>
+      <span class="label" data-i18n="help">ヘルプ</span>
+    </button>
+  </div>
+</aside>
+
+<!-- ══════════════ MAIN ══════════════ -->
+<div class="main">
+
+  <!-- TOP BAR -->
+  <header class="top-bar">
+    <input id="pname" class="pname-inp" type="text" placeholder="プロジェクト名を入力…" value="新規プロジェクト">
+    <div class="top-actions">
+      <button class="btn btn-new" onclick="confirmNewProject()">
+        <span class="mi" style="font-size:14px">create_new_folder</span>
+        <span data-i18n="new_project">新規プロジェクト</span>
+      </button>
+      <button class="btn btn-cta" onclick="openM()">
+        <span class="mi" style="font-size:14px">add</span>
+        <span data-i18n="add_task">タスクを追加</span>
+      </button>
+      <button class="btn btn-save" onclick="saveData()">
+        <span class="mi" style="font-size:14px">save</span>
+        <span data-i18n="save">保存</span>
+      </button>
+      <button class="btn btn-share" onclick="shareURL()">
+        <span class="mi" style="font-size:14px">share</span>
+        <span data-i18n="share">プロジェクト共有</span>
+      </button>
+      <span id="ls"></span>
+    </div>
+  </header>
+
+  <!-- SUB-TOOLBAR -->
+  <div class="sub-bar">
+    <span class="sb-lbl" data-i18n="period">表示期間</span>
+    <input type="date" class="d-inp" id="vs" onchange="onVC()">
+    <span style="color:var(--outline-v);font-size:12px;font-weight:700">–</span>
+    <input type="date" class="d-inp" id="ve" onchange="onVC()">
+    <div class="sb-sep"></div>
+    <span class="sb-lbl" data-i18n="lightning">⚡ イナズマ線</span>
+    <input type="date" class="d-inp" id="ld" onchange="if(A.sl)ra()">
+    <button class="lbtn" id="lbtn" onclick="tl()">OFF</button>
+  </div>
+
+  <!-- GANTT -->
+  <div class="gantt-section">
+    <div class="g-left">
+      <div class="lhdr" id="lhdr">
+        <div class="lh-drag" style="opacity:.4;font-size:13px">⠿</div>
+        <div class="lh-name" data-i18n="col_task">タスク名 / 担当者</div>
+        <div class="col-resizer" id="col-resizer" title="ドラッグで列幅を調整"></div>
+        <div class="lh-org"   data-i18n="col_org">組織名</div>
+        <div class="lh-start" data-i18n="col_start">開始</div>
+        <div class="lh-end"   data-i18n="col_end">終了</div>
+        <div class="lh-prog"  data-i18n="col_prog">進捗</div>
+      </div>
+      <div class="t-scroll" id="ts">
+        <div class="empty-msg">
+          <div class="e-ico">📊</div>
+          <p data-i18n="empty_msg">「タスクを追加」で<br>タスクを登録してください</p>
+        </div>
+      </div>
+    </div>
+    <div class="g-resizer" id="g-resizer"></div>
+    <div class="g-right" id="gr">
+      <div class="chart-wrap" id="cw"></div>
+    </div>
+  </div>
+  <div class="v-resizer" id="v-resizer"></div>
+
+  <!-- BOTTOM SECTION -->
+  <div class="bottom-section">
+    <div class="activity-log">
+      <div class="al-header">
+        <div class="al-title">
+          <span class="mi">history</span>
+          <span data-i18n="activity_log">操作履歴</span>
+        </div>
+      </div>
+      <div class="al-list" id="al-list"></div>
+    </div>
+
+    <!-- Project Health — redesigned with ring -->
+    <div class="project-health">
+      <div>
+        <div class="ph-label" data-i18n="ph_label">Project Health</div>
+        <div class="ph-status" id="ph-status">—</div>
+      </div>
+      <div class="ph-mid">
+        <div class="ph-ring-wrap">
+          <svg width="80" height="80" viewBox="0 0 80 80">
+            <circle class="ph-ring-bg" cx="40" cy="40" r="33"/>
+            <circle class="ph-ring-fill" id="ph-ring" cx="40" cy="40" r="33"
+              stroke-dasharray="0 207" stroke-dashoffset="0"/>
+          </svg>
+          <div class="ph-ring-txt">
+            <div class="ph-pct-big" id="ph-pct-big">0%</div>
+            <div class="ph-pct-sub" data-i18n="ph_progress">全体進捗</div>
+          </div>
+        </div>
+      </div>
+      <div class="ph-stats">
+        <div class="ph-stat">
+          <div class="ph-stat-val" id="ph-done">0</div>
+          <div class="ph-stat-lbl" data-i18n="ph_done">完了</div>
+        </div>
+        <div class="ph-stat">
+          <div class="ph-stat-val" id="ph-prog">0</div>
+          <div class="ph-stat-lbl" data-i18n="ph_inprog">進行中</div>
+        </div>
+        <div class="ph-stat">
+          <div class="ph-stat-val" id="ph-delay">0</div>
+          <div class="ph-stat-lbl" data-i18n="ph_delay">遅延</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <nav class="footer-nav">
+      <button class="footer-nav-link" onclick="sm('page-about')">このサイトについて</button>
+      <span class="footer-sep">|</span>
+      <button class="footer-nav-link" onclick="sm('help-modal')">ガンちゃんの使い方</button>
+      <span class="footer-sep">|</span>
+      <button class="footer-nav-link" onclick="sm('page-faq')">よくある質問</button>
+      <span class="footer-sep">|</span>
+      <button class="footer-nav-link" onclick="sm('page-blog')">ブログ</button>
+      <span class="footer-sep">|</span>
+      <button class="footer-nav-link" onclick="openContact()">お問い合わせ</button>
+      <span class="footer-sep">|</span>
+      <button class="footer-nav-link" onclick="sm('page-terms')">利用規約</button>
+      <span class="footer-sep">|</span>
+      <button class="footer-nav-link" onclick="sm('page-history')">更新履歴</button>
+      <span class="footer-sep">|</span>
+      <button class="footer-nav-link" onclick="sm('page-privacy')">個人情報保護方針</button>
+    </nav>
+    <div class="footer-copy">ガンちゃん Copyright &copy; 2026 株式会社好循環 All Rights Reserved.</div>
+  </footer>
+    <!-- ═══ AdSense 広告スロット (承認後に有効化) ═══ -->
+  <!--
+  <div style="text-align:center;padding:8px;background:var(--s-low);border-top:1px solid rgba(169,180,185,.1)">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+  -->
+</div><!-- /main -->
+
+<!-- TOAST -->
+<div id="toast-area"></div>
+
+<!-- ══════════════ TASK MODAL ══════════════ -->
+<div class="overlay" id="tm">
+  <div class="modal">
+    <div class="m-hdr">
+      <div class="m-title"><span id="m-icon" class="mi" style="font-size:16px">add_circle</span><span id="m-title-txt">タスク追加</span></div>
+      <button class="m-close" onclick="cm('tm')">✕</button>
+    </div>
+    <div class="m-body">
+      <input type="hidden" id="eid"><input type="hidden" id="epid">
+      <div class="fg-grid">
+        <div class="fg fg-full"><label data-i18n="lbl_name">タスク名 *</label><input type="text" id="fn" placeholder="例）要件定義・設計フェーズ"></div>
+        <div class="fg">
+          <label data-i18n="lbl_org">担当組織名</label>
+          <input type="text" id="fc" placeholder="例）第一建設" oninput="onCoInput(this.value)">
+          <div class="co-hint" id="co-hint"></div>
+        </div>
+        <div class="fg"><label data-i18n="lbl_assignee">担当者名</label><input type="text" id="fa" placeholder="例）佐藤 健"></div>
+        <div class="fg"><label data-i18n="lbl_start">計画開始日 *</label><input type="date" id="fs" onchange="onStartChange()"></div>
+        <div class="fg"><label data-i18n="lbl_end">計画終了日 *</label><input type="date" id="fe"></div>
+        <div class="fg fg-full">
+          <label data-i18n="lbl_progress">進捗率</label>
+          <div class="range-row">
+            <input type="range" id="fp" min="0" max="100" value="0" oninput="g('fpv').textContent=this.value+'%'">
+            <span class="rv" id="fpv">0%</span>
+          </div>
+        </div>
+        <div class="fg fg-full"><label data-i18n="lbl_color">バーカラー</label><div class="cpks" id="cpks"></div></div>
+        <div class="fg fg-full"><label data-i18n="lbl_memo">メモ / 備考</label><input type="text" id="fm" placeholder="補足情報など"></div>
+      </div>
+    </div>
+    <div class="m-foot">
+      <button class="btn btn-danger" id="dbt" style="display:none;margin-right:auto" onclick="delTask()">
+        <span class="mi" style="font-size:14px">delete</span><span data-i18n="delete">削除</span>
+      </button>
+      <button class="btn btn-ghost" id="pbt" style="display:none;margin-right:8px;color:var(--on-surface-v);border-color:rgba(169,180,185,.3)" onclick="promoteToRoot()">
+        <span class="mi" style="font-size:14px">arrow_upward</span>
+        <span>親から外す</span>
+      </button>
+      <button class="btn btn-ghost" onclick="cm('tm')" data-i18n="cancel">キャンセル</button>
+      <button class="btn btn-cta" onclick="saveTask()">
+        <span class="mi" style="font-size:14px">check</span><span data-i18n="save_task">保存する</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ SETTINGS MODAL ══════════════ -->
+<div class="overlay" id="settings-modal">
+  <div class="modal" style="width:420px">
+    <div class="m-hdr">
+      <div class="m-title"><span class="mi" style="font-size:16px">settings</span><span data-i18n="settings_title">設定</span></div>
+      <button class="m-close" onclick="cm('settings-modal')">✕</button>
+    </div>
+    <div class="m-body">
+
+      <!-- Language -->
+      <div class="settings-section">
+        <div class="settings-title" data-i18n="settings_lang">🌐 表示言語</div>
+        <div class="toggle-group">
+          <button class="tog-btn active" id="lang-ja" onclick="setLang('ja')">🇯🇵 日本語</button>
+          <button class="tog-btn" id="lang-en" onclick="setLang('en')">🇺🇸 English</button>
+        </div>
+      </div>
+
+      <!-- Font size -->
+      <div class="settings-section">
+        <div class="settings-title" data-i18n="settings_fontsize">🔡 文字サイズ</div>
+        <div class="toggle-group">
+          <button class="tog-btn" id="fs-sm" onclick="setFontSize('sm')">小</button>
+          <button class="tog-btn active" id="fs-md" onclick="setFontSize('md')">中（標準）</button>
+          <button class="tog-btn" id="fs-lg" onclick="setFontSize('lg')">大</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="m-foot">
+      <button class="btn btn-cta" onclick="cm('settings-modal')"><span data-i18n="close">閉じる</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ HELP MODAL ══════════════ -->
+<div class="overlay" id="help-modal">
+  <div class="modal" style="width:620px">
+    <div class="m-hdr">
+      <div class="m-title"><span class="mi" style="font-size:16px">help</span><span id="help-title">ガンちゃん — ヘルプ</span></div>
+      <button class="m-close" onclick="cm('help-modal')">✕</button>
+    </div>
+    <div class="m-body" id="help-body">
+      <!-- Rendered by JS for i18n support -->
+    </div>
+    <div class="m-foot">
+      <button class="btn btn-cta" onclick="cm('help-modal')"><span data-i18n="close">閉じる</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ CONFIRM MODAL ══════════════ -->
+<div class="overlay" id="confirm-modal">
+  <div class="modal" style="width:380px">
+    <div class="m-hdr">
+      <div class="m-title"><span class="mi" style="font-size:16px;color:var(--amber)">warning</span><span id="confirm-title">確認</span></div>
+      <button class="m-close" onclick="cm('confirm-modal')">✕</button>
+    </div>
+    <div class="m-body">
+      <p class="confirm-msg" id="confirm-msg"></p>
+    </div>
+    <div class="m-foot">
+      <button class="btn btn-ghost" onclick="cm('confirm-modal')" data-i18n="cancel">キャンセル</button>
+      <button class="btn btn-danger" id="confirm-ok">実行する</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════ PAGE: このサイトについて ══════════════ -->
+<div class="overlay" id="page-about">
+  <div class="modal page-modal">
+    <div class="m-hdr">
+      <div class="m-title"><span class="mi" style="font-size:16px">info</span>このサイトについて</div>
+      <button class="m-close" onclick="cm('page-about')">✕</button>
+    </div>
+    <div class="page-body">
+      <h2>ガンちゃんとは</h2>
+      <p class="page-subtitle">株式会社好循環が提供するWebブラウザベースのガントチャート管理ツールです</p>
+      <p>ガンちゃんは、プロジェクトのスケジュール管理をシンプルかつ直感的に行えるよう設計されたガントチャートアプリケーションです。</p>
+      <h3>主な特長</h3>
+      <ul>
+        <li>ログイン不要・インストール不要のゼロ設定運用</li>
+        <li>タスクの追加・編集・削除・ドラッグ並び替え</li>
+        <li>担当会社ごとにバーカラーを自動統一</li>
+        <li>⚡ イナズマ線による計画と実績のズレの可視化</li>
+        <li>日本の祝日をAPIから自動取得しカレンダーに反映</li>
+        <li>Project Healthパネルで全体進捗をリアルタイム表示</li>
+        <li>日本語 / English の表示言語切り替え</li>
+      </ul>
+      <h3>提供企業</h3>
+      <table>
+        <tr><td>会社名</td><td>株式会社好循環（KoJunKan Inc.）</td></tr>
+        <tr><td>Webサイト</td><td><a href="https://kojunkan.jp" target="_blank" rel="noopener">https://kojunkan.jp</a></td></tr>
+        <tr><td>事業内容</td><td>ITコンサルティング・Webシステム開発</td></tr>
+        <tr><td>セキュリティ</td><td>セキュリティアクション★★ 宣言済み</td></tr>
+      </table>
+      <div class="info-box">ガンちゃんは継続的にアップデートされています。最新バージョンの情報は「更新履歴」をご確認ください。</div>
+    </div>
+    <div class="m-foot">
+      <button class="btn btn-cta" onclick="cm('page-about')">閉じる</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ PAGE: よくある質問 ══════════════ -->
+<div class="overlay" id="page-faq">
+  <div class="modal page-modal" style="max-width:760px">
+    <div class="m-hdr">
+      <div class="m-title"><span class="mi" style="font-size:16px">quiz</span>よくある質問（FAQ）</div>
+      <button class="m-close" onclick="cm('page-faq')">✕</button>
+    </div>
+    <div class="page-body" style="max-height:70vh;overflow-y:auto">
+      <h2>よくある質問（FAQ）</h2>
+      <p class="page-subtitle">ガンちゃんに関するよくあるご質問と回答をまとめています。お探しの答えが見つからない場合は<a href="#" onclick="cm('page-faq');openContact()" style="color:var(--secondary)">お問い合わせフォーム</a>からご連絡ください。</p>
+
+      <!-- カテゴリナビ -->
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px">
+        <span style="font-size:10px;font-weight:700;color:var(--outline);align-self:center;letter-spacing:.5px;text-transform:uppercase">カテゴリ：</span>
+        <a href="#faq-basic" style="font-size:11px;padding:3px 10px;border-radius:20px;background:var(--primary-fixed);color:var(--secondary);font-weight:700;text-decoration:none">基本・特長</a>
+        <a href="#faq-start" style="font-size:11px;padding:3px 10px;border-radius:20px;background:var(--s-high);color:var(--on-surface-v);font-weight:700;text-decoration:none">はじめ方</a>
+        <a href="#faq-gantt" style="font-size:11px;padding:3px 10px;border-radius:20px;background:var(--s-high);color:var(--on-surface-v);font-weight:700;text-decoration:none">ガントチャート</a>
+        <a href="#faq-inazuma" style="font-size:11px;padding:3px 10px;border-radius:20px;background:var(--s-high);color:var(--on-surface-v);font-weight:700;text-decoration:none">イナズマ線</a>
+        <a href="#faq-share" style="font-size:11px;padding:3px 10px;border-radius:20px;background:var(--s-high);color:var(--on-surface-v);font-weight:700;text-decoration:none">共有・保存</a>
+        <a href="#faq-settings" style="font-size:11px;padding:3px 10px;border-radius:20px;background:var(--s-high);color:var(--on-surface-v);font-weight:700;text-decoration:none">表示設定</a>
+      </div>
+
+      <!-- ── 基本・特長 ── -->
+      <h3 id="faq-basic" style="border-left:3px solid var(--secondary);padding-left:10px;margin-top:24px">🌟 ガンちゃんの基本・特長</h3>
+
+      <div class="info-box" style="margin-bottom:16px">
+        <strong>Q. ガンちゃんとは何ですか？</strong>
+        <p style="margin-top:6px;margin-bottom:0">ガンちゃんは、ブラウザだけで使える<strong>無料のWebガントチャートツール</strong>です。プロジェクトのスケジュール管理・タスク管理・進捗管理を、インストールやログイン不要でサクッと始められます。株式会社好循環が開発・提供しています。</p>
+      </div>
+
+      <p><strong>Q. ログインは必要ですか？</strong></p>
+      <p>不要です。URLにアクセスするだけですぐに使い始められます。アカウント登録・ログイン・メール認証などの手続きは一切ありません。ブラウザを開いた瞬間から、ガントチャートの作成ができます。</p>
+
+      <p><strong>Q. 無料で使えますか？</strong></p>
+      <p>はい、完全無料です。基本機能（タスク管理・ガントチャート表示・イナズマ線・プロジェクト共有など）はすべて無償でご利用いただけます。</p>
+
+      <p><strong>Q. どんな人に向いていますか？</strong></p>
+      <p>以下のような方に特におすすめです。</p>
+      <ul>
+        <li>プロジェクト管理ツールを手軽に使いたい方</li>
+        <li>建設・IT・製造・イベントなどの工程管理をしたい方</li>
+        <li>Excelのガントチャートが使いにくいと感じている方</li>
+        <li>チームメンバーとスケジュールを共有したい方</li>
+        <li>遅延しているタスクを視覚的に把握したい方</li>
+        <li>複数の担当会社・担当者が混在するプロジェクトを管理したい方</li>
+      </ul>
+
+      <p><strong>Q. 他のガントチャートツールと何が違いますか？</strong></p>
+      <p>ガンちゃんの最大の特長は「<strong>ログイン不要でサクッと作れる</strong>」点です。多機能なプロジェクト管理ツールは、登録・設定に時間がかかりがちですが、ガンちゃんはURLを開いてすぐに使えます。また、日本の祝日を自動反映・土日の色分け・イナズマ線による遅延可視化など、実務で使いやすい機能を厳選して搭載しています。</p>
+
+      <p><strong>Q. スマートフォンやタブレットでも使えますか？</strong></p>
+      <p>Chrome・Safari・Firefox・Edgeなどの最新ブラウザが動作するデバイスであれば利用可能です。ただし、ガントチャートは横に広い表示のため、PC・タブレット環境が最も快適です。</p>
+
+      <!-- ── はじめ方 ── -->
+      <h3 id="faq-start" style="border-left:3px solid var(--secondary);padding-left:10px;margin-top:28px">🚀 はじめ方</h3>
+
+      <p><strong>Q. どうすればガントチャートをすぐに作れますか？</strong></p>
+      <p>以下の3ステップだけです。</p>
+      <ul>
+        <li>① ツールバーの「<strong>＋ タスクを追加</strong>」ボタンをクリック</li>
+        <li>② タスク名・担当者・開始日・終了日・進捗率を入力して「保存する」</li>
+        <li>③ ガントチャートに自動でバーが表示される</li>
+      </ul>
+      <p>設定や登録は不要です。ページを開いた直後から作業できます。</p>
+
+      <p><strong>Q. タスクを追加する方法を教えてください</strong></p>
+      <p>画面上部の「＋ タスクを追加」ボタン、または画面右下の＋ボタンをクリックすると入力モーダルが開きます。タスク名・担当組織名・担当者名・開始日・終了日・進捗率・バーカラー・メモを設定できます。2件目以降のタスクを追加する際は、前のタスクの終了日が開始日に自動セットされます。</p>
+
+      <p><strong>Q. タスクの順番を変えられますか？</strong></p>
+      <p>はい。左パネルの各タスク行にカーソルを乗せると「⠿」のドラッグハンドルが表示されます。このハンドルをドラッグ＆ドロップすることで、タスクの表示順を自由に並び替えられます。ガントチャート右側のバーも連動して入れ替わります。</p>
+
+      <p><strong>Q. タスクを編集・削除するには？</strong></p>
+      <p>左パネルのタスク行またはガントチャートのバーをクリックすると編集モーダルが開きます。内容を変更して「保存する」をクリックすれば更新されます。削除は編集モーダル左下の「削除」ボタンから行えます（確認ダイアログが表示されます）。</p>
+
+      <!-- ── ガントチャート ── -->
+      <h3 id="faq-gantt" style="border-left:3px solid var(--secondary);padding-left:10px;margin-top:28px">📊 ガントチャートについて</h3>
+
+      <p><strong>Q. タスクバーの色はどういう意味ですか？</strong></p>
+      <ul>
+        <li><span style="color:var(--tertiary);font-weight:700">■ 緑</span>：完了タスク（進捗100%）</li>
+        <li><span style="color:var(--secondary);font-weight:700">■ 青</span>：進行中タスク（進捗1〜99%）</li>
+        <li><span style="color:#9f403d;font-weight:700">■ 赤</span>：遅延タスク（終了日を過ぎているのに未完了）</li>
+        <li><span style="color:var(--primary);font-weight:700">■ グレー</span>：未着手タスク（進捗0%）</li>
+      </ul>
+      <p>バーカラーはタスク編集画面でカスタマイズすることも可能です。</p>
+
+      <p><strong>Q. 同じ会社の担当タスクを同じ色にできますか？</strong></p>
+      <p>はい、自動で統一されます。タスク編集モーダルで「担当組織名」を入力すると、同じ会社名を持つタスクのバーが自動的に同色に揃います。複数の担当会社が混在するプロジェクトでも、担当ごとに色分けされて見やすくなります。</p>
+
+      <p><strong>Q. 表示期間を変えたい</strong></p>
+      <p>ツールバーの「表示期間」欄（開始日〜終了日）を変更することで、カレンダーの表示範囲を自由に調整できます。変更はリアルタイムで反映されます。</p>
+
+      <p><strong>Q. 土日・祝日はどのように表示されますか？</strong></p>
+      <p>土曜日は薄い青、日曜日・祝日は薄い赤で背景が色分けされ、視覚的に判別できます。今日の日付はシアン色でハイライトされます。祝日データはAPI（holidays-jp.github.io）から起動時に自動取得するため、手動設定は不要です。</p>
+
+      <p><strong>Q. プロジェクト名を設定するには？</strong></p>
+      <p>画面上部（ヘッダー）のプロジェクト名入力欄に直接入力してください。入力内容は保存ボタンを押したタイミングでデータに反映されます。</p>
+
+      <!-- ── イナズマ線 ── -->
+      <h3 id="faq-inazuma" style="border-left:3px solid var(--secondary);padding-left:10px;margin-top:28px">⚡ イナズマ線について</h3>
+
+      <div class="info-box" style="margin-bottom:16px">
+        <strong>イナズマ線とは？</strong>
+        <p style="margin-top:6px;margin-bottom:0">イナズマ線は、ガントチャートにおいて「<strong>計画上の進捗点</strong>」と「<strong>実際の進捗点</strong>」を結んだ折れ線のことです。進捗確認日（基準日）を設定することで、各タスクが予定通りに進んでいるか・遅延しているかを一目で把握できます。</p>
+      </div>
+
+      <p><strong>Q. イナズマ線はどうやって使いますか？</strong></p>
+      <ul>
+        <li>① ツールバーの「イナズマ線」横の日付ピッカーで<strong>基準日</strong>を設定（デフォルトは今日）</li>
+        <li>② 「OFF」ボタンをクリックして「⚡ ON」に切り替え</li>
+        <li>③ ガントチャート上にイナズマ線が表示される</li>
+      </ul>
+
+      <p><strong>Q. イナズマ線の読み方を教えてください</strong></p>
+      <ul>
+        <li><strong>🟡 黄色の縦破線</strong>：基準日（進捗確認日）のライン</li>
+        <li><strong>🟡 黄色の丸マーカー</strong>：各タスクの計画上の進捗点</li>
+        <li><strong>🔴 赤の丸マーカー＋横線</strong>：遅延タスク（実績 ＜ 計画）。数値ラベルで何%遅延かが分かります</li>
+        <li><strong>🟢 緑の丸マーカー＋横線</strong>：前倒しタスク（実績 ＞ 計画）</li>
+        <li><strong>折れ線</strong>：各タスクの実績進捗点をつないだイナズマ線本体</li>
+      </ul>
+
+      <p><strong>Q. 基準日はどう設定すればいいですか？</strong></p>
+      <p>通常は「今日」（デフォルト）を使います。過去の日付を設定すると「あの時点でどれだけ遅延していたか」を振り返ることもできます。未来日付を設定して「このまま進むとどうなるか」をシミュレーションする使い方も有効です。</p>
+
+      <p><strong>Q. 進捗率はどこで入力しますか？</strong></p>
+      <p>タスクの追加・編集モーダル内の「進捗率」スライダーで0〜100%を設定します。スライダーを動かすだけで入力でき、保存するとガントチャートのバーに進捗が色で反映されます。</p>
+
+      <p><strong>Q. イナズマ線で遅延が発見されたら何をすればいいですか？</strong></p>
+      <p>赤マーカーのタスクをクリックして編集モーダルを開き、進捗率や終了日を見直してください。また、遅延の度合い（赤いラベルの数値）を確認して、後続タスクへの影響を考慮したスケジュール調整を行うことをお勧めします。</p>
+
+      <!-- ── 共有 ── -->
+      <h3 id="faq-share" style="border-left:3px solid var(--secondary);padding-left:10px;margin-top:28px">🔗 共有・連携について</h3>
+
+      <p><strong>Q. 他のメンバーとプロジェクトを共有するには？</strong></p>
+      <p>ヘッダーの「プロジェクト共有」ボタンをクリックするとURLがクリップボードにコピーされます。そのURLをメール・Slack・チャットなどで共有すれば、同じサーバーにアクセスできる相手にプロジェクト画面を見せられます。</p>
+
+      <p><strong>Q. 共有したURLで編集もできますか？</strong></p>
+      <p>はい。同じURLにアクセスした人は誰でも閲覧・編集が可能です。アクセス制限（閲覧専用モードや認証）は現バージョンではご提供していません。社内のサーバーやアクセス制限がかかった環境に設置することをお勧めします。</p>
+
+      <!-- ── 表示設定 ── -->
+      <h3 id="faq-settings" style="border-left:3px solid var(--secondary);padding-left:10px;margin-top:28px">⚙️ 表示設定・カスタマイズ</h3>
+
+      <p><strong>Q. 英語表示にできますか？</strong></p>
+      <p>はい。サイドバーの「設定」アイコンをクリックし、「English」を選択すると画面全体の表示言語が英語に切り替わります。日本語に戻すには同様に「日本語」を選択してください。</p>
+
+      <p><strong>Q. 文字サイズを変えたい</strong></p>
+      <p>サイドバーの「設定」から文字サイズを「小・中（標準）・大」の3段階で切り替えられます。視認性に応じてお好みのサイズをご利用ください。</p>
+
+      <p><strong>Q. タスクのバーカラーを自由に変えられますか？</strong></p>
+      <p>はい。タスクの編集モーダル内「バーカラー」欄に10色のカラーパレットがあります。お好みの色を選択して保存することができます。ただし、同一会社のタスクは会社カラーが優先されます。</p>
+
+      <p><strong>Q. カレンダーの表示範囲（日付幅）を調整できますか？</strong></p>
+      <p>ツールバーの「表示期間」（開始日〜終了日）で表示する日付の範囲を自由に設定できます。短期（1週間単位）〜長期（数ヶ月）まで柔軟に対応できます。</p>
+
+      <div class="info-box" style="margin-top:24px">
+        ここに掲載されていないご質問は、お気軽に<a href="#" onclick="cm('page-faq');openContact()" style="color:var(--secondary)">お問い合わせフォーム</a>よりご連絡ください。通常2〜3営業日以内にご返信いたします。
+      </div>
+    </div>
+    <div class="m-foot">
+      <button class="btn btn-ghost" onclick="cm('page-faq');openContact()">お問い合わせ</button>
+      <button class="btn btn-cta" onclick="cm('page-faq')">閉じる</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ PAGE: ブログ ══════════════ -->
+<div class="overlay" id="page-blog">
+  <div class="modal page-modal">
+    <div class="m-hdr">
+      <div class="m-title"><span class="mi" style="font-size:16px">article</span>ブログ</div>
+      <button class="m-close" onclick="cm('page-blog')">✕</button>
+    </div>
+    <div class="page-body">
+      <h2>ガンちゃん開発ブログ</h2>
+      <p class="page-subtitle">アップデート情報・活用Tipsをお届けします</p>
+      <div class="blog-list">
+        <div class="blog-card">
+          <div class="blog-date">2026年4月13日</div>
+          <div class="blog-title">ガンちゃん v2.15 — ドラッグで親子タスク化・複数プロジェクト完全対応</div>
+          <div class="blog-excerpt">タスクをドラッグ＆ドロップして別のタスクの中央にドロップすると子タスクになる「3ゾーンD&D」を実装。api.phpも複数プロジェクト保存（?p=xxx）とparentId保存に対応しました。</div>
+          <span class="blog-tag">メジャーアップデート</span>
+        </div>
+        <div class="blog-card">
+          <div class="blog-date">2026年4月13日</div>
+          <div class="blog-title">v2.14 — 親子・孫タスク階層化と3種リサイザーを追加</div>
+          <div class="blog-excerpt">タスクを階層化して管理できる「親子・孫タスク」機能を実装。左右パネル・タスク名列・上下エリアの3ヶ所でドラッグ調整できるリサイザーも追加しました。</div>
+          <span class="blog-tag">新機能</span>
+        </div>
+        <div class="blog-card">
+          <div class="blog-date">2026年4月 2日</div>
+          <div class="blog-title">ガンちゃん v2.5 リリース — 多言語対応・ヘルプ機能を追加</div>
+          <div class="blog-excerpt">設定画面に日本語/English切り替えと文字サイズ（大/中/小）を実装。ヘルプモーダル・新規プロジェクト作成ボタン・フッターを追加し、UIを大幅に改善しました。</div>
+          <span class="blog-tag">新機能</span>
+        </div>
+        <div class="blog-card">
+          <div class="blog-date">2026年4月 1日</div>
+          <div class="blog-title">v2.4 — The Architectural Ledger デザインに全面刷新</div>
+          <div class="blog-excerpt">デザイナーの設計書をもとにUI全面刷新。サイドバーナビゲーション・グラスモーフィズムヘッダー・操作履歴パネル・Project Healthパネルを新設しました。</div>
+          <span class="blog-tag">デザイン</span>
+        </div>
+        <div class="blog-card">
+          <div class="blog-date">2026年4月 1日</div>
+          <div class="blog-title">v2.2 — タスクのドラッグ＆ドロップ並び替えを実装</div>
+          <div class="blog-excerpt">タスクリストの「⠿」ハンドルをドラッグすることで、タスクの表示順を自由に並び替えられるようになりました。</div>
+          <span class="blog-tag">機能改善</span>
+        </div>
+        <div class="blog-card">
+          <div class="blog-date">2026年4月 1日</div>
+          <div class="blog-title">v2.0 — デザイン刷新・プロジェクト共有・会社別カラー統一</div>
+          <div class="blog-excerpt">DM Sans＋Syneフォント採用でモダンなデザインに。URLコピーで共有できる「プロジェクト共有」機能と、同一会社のタスクバーを自動で同色にする機能を追加。</div>
+          <span class="blog-tag">メジャーアップデート</span>
+        </div>
+        <div class="blog-card">
+          <div class="blog-date">2026年3月</div>
+          <div class="blog-title">ガンちゃん v1.0 — 初版リリース</div>
+          <div class="blog-excerpt">ガントチャート基本機能・JSON保存・祝日自動取得・⚡ イナズマ線を実装した初版をリリースしました。</div>
+          <span class="blog-tag">リリース</span>
+        </div>
+      </div>
+    </div>
+    <div class="m-foot">
+      <button class="btn btn-cta" onclick="cm('page-blog')">閉じる</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ PAGE: お問い合わせ ══════════════ -->
+<div class="overlay" id="page-contact">
+  <div class="modal page-modal">
+    <div class="m-hdr">
+      <div class="m-title"><span class="mi" style="font-size:16px">mail</span>お問い合わせ</div>
+      <button class="m-close" onclick="cm('page-contact')">✕</button>
+    </div>
+    <div class="page-body">
+      <h2>お問い合わせ</h2>
+      <p class="page-subtitle">ガンちゃんに関するご質問・ご要望・不具合報告はこちらからお送りください</p>
+
+      <!-- メール連絡先 -->
+      <div class="info-box" style="display:flex;align-items:flex-start;gap:10px;margin-bottom:18px">
+        <span class="mi" style="color:var(--secondary);font-size:18px;flex-shrink:0">mail</span>
+        <div>
+          <div style="font-weight:700;font-size:12px;margin-bottom:2px">メールでのお問い合わせ</div>
+          <div style="font-size:12px">support@kojunkan.jp</div>
+          <div style="font-size:11px;color:var(--outline)">受付時間：平日 10:00〜18:00（土日祝・年末年始を除く）</div>
+        </div>
+      </div>
+
+      <div id="contact-form-wrap">
+        <div style="font-size:13px;font-weight:700;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(169,180,185,.15)">お問い合わせフォーム</div>
+        <div class="contact-form">
+          <div class="cf-field">
+            <label class="cf-label">お問い合わせの種類 <span class="req">*</span></label>
+            <select class="cf-select" id="cf-type">
+              <option value="">選択してください</option>
+              <option value="機能に関するご質問">機能に関するご質問</option>
+              <option value="不具合・バグ報告">不具合・バグ報告</option>
+              <option value="機能改善・新機能のご要望">機能改善・新機能のご要望</option>
+              <option value="導入・カスタマイズのご相談">導入・カスタマイズのご相談</option>
+              <option value="その他">その他</option>
+            </select>
+          </div>
+          <div class="cf-field">
+            <label class="cf-label">お名前 <span class="req">*</span></label>
+            <input type="text" class="cf-input" id="cf-name" placeholder="例：山田 太郎">
+          </div>
+          <div class="cf-field">
+            <label class="cf-label">メールアドレス <span class="req">*</span></label>
+            <input type="email" class="cf-input" id="cf-email" placeholder="例：example@email.com">
+          </div>
+          <div class="cf-field">
+            <label class="cf-label">お問い合わせ内容 <span class="req">*</span></label>
+            <textarea class="cf-textarea" id="cf-message" placeholder="ご質問・ご意見をできるだけ詳しくご記入ください。"></textarea>
+          </div>
+          <p class="cf-note">送信いただく前に<a href="#" onclick="cm('page-contact');sm('page-privacy')" style="color:var(--secondary)">個人情報保護方針</a>をご確認ください。お問い合わせフォームに入力いただいた情報は、お問い合わせへの返答にのみ使用します。</p>
+          <button class="cf-submit" id="cf-submit-btn" onclick="submitContact()">
+            送信する
+          </button>
+          <p style="margin-top:12px;font-size:11.5px;color:var(--on-surface-v)">
+            まずは<a href="#" onclick="cm('page-contact');sm('page-faq')" style="color:var(--secondary)">よくある質問ページ</a>もご確認ください。多くの疑問がそちらで解決できます。
+          </p>
+        </div>
+      </div>
+
+      <div class="cf-success" id="cf-success">
+        <div class="ok-icon">✅</div>
+        <h3>送信が完了しました</h3>
+        <p>お問い合わせありがとうございます。<br>内容を確認のうえ、担当者よりご連絡いたします。</p>
+        <p style="margin-top:16px;font-size:11px;color:var(--outline-v)">通常3営業日以内にご返信いたします</p>
+      </div>
+    </div>
+    <div class="m-foot" id="cf-foot">
+      <button class="btn btn-ghost" onclick="cm('page-contact')">閉じる</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ PAGE: 利用規約 ══════════════ -->
+<div class="overlay" id="page-terms">
+  <div class="modal page-modal">
+    <div class="m-hdr">
+      <div class="m-title"><span class="mi" style="font-size:16px">gavel</span>利用規約</div>
+      <button class="m-close" onclick="cm('page-terms')">✕</button>
+    </div>
+    <div class="page-body">
+      <h2>ガンちゃん 利用規約</h2>
+      <p class="page-subtitle">最終更新日：2026年4月2日</p>
+      <p>本利用規約（以下「本規約」）は、株式会社好循環（以下「当社」）が提供するガントチャートツール「ガンちゃん」（以下「本サービス」）の利用条件を定めるものです。</p>
+      <h3>第1条（適用）</h3>
+      <p>本規約は、ユーザーと当社との間の本サービスの利用に関わる一切の関係に適用されます。本サービスを利用することで、本規約に同意したものとみなします。</p>
+      <h3>第2条（利用登録）</h3>
+      <p>本サービスはログイン不要でご利用いただけます。サーバーへのインストールおよびブラウザでのアクセスをもって利用開始とします。</p>
+      <h3>第3条（禁止事項）</h3>
+      <p>ユーザーは、本サービスの利用にあたり、以下の行為を行ってはなりません。</p>
+      <ul>
+        <li>法令または公序良俗に違反する行為</li>
+        <li>犯罪行為に関連する行為</li>
+        <li>当社のサーバーまたはネットワークの機能を破壊・妨害する行為</li>
+        <li>本サービスの提供を妨害するおそれのある行為</li>
+        <li>不正アクセスをし、またはこれを試みる行為</li>
+        <li>本サービスを逆アセンブル・逆コンパイルする行為</li>
+        <li>その他、当社が不適切と判断する行為</li>
+      </ul>
+      <h3>第4条（知的財産権）</h3>
+      <p>本サービスに関連する著作権その他一切の知的財産権は当社に帰属します。ユーザーは本規約の範囲内でのみ本サービスを利用できます。</p>
+      <h3>第5条（免責事項）</h3>
+      <p>当社は、本サービスに事実上または法律上の瑕疵（安全性、信頼性、正確性、完全性、有効性、特定の目的への適合性、セキュリティなどに関する欠陥、エラーやバグ、権利侵害などを含みます）がないことを明示的にも黙示的にも保証しておりません。</p>
+      <p>当社は、本サービスに起因してユーザーに生じたあらゆる損害について、当社の故意又は重過失による場合を除き、一切の責任を負いません。</p>
+      <h3>第6条（サービス内容の変更等）</h3>
+      <p>当社は、ユーザーへの事前の告知なしに、本サービスの内容を変更したり本サービスの提供を中止することができるものとし、これによってユーザーに生じた損害について責任を負いません。</p>
+      <h3>第7条（準拠法・裁判管轄）</h3>
+      <p>本規約の解釈にあたっては、日本法を準拠法とします。本サービスに関して紛争が生じた場合には、当社の本店所在地を管轄する裁判所を専属的合意管轄とします。</p>
+      <h3>第8条（お問い合わせ）</h3>
+      <p>本規約に関するお問い合わせは、<a href="#" onclick="cm('page-terms');sm('page-contact')">お問い合わせフォーム</a>よりご連絡ください。</p>
+    </div>
+    <div class="m-foot">
+      <button class="btn btn-cta" onclick="cm('page-terms')">閉じる</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ PAGE: 更新履歴 ══════════════ -->
+<div class="overlay" id="page-history">
+  <div class="modal page-modal">
+    <div class="m-hdr">
+      <div class="m-title"><span class="mi" style="font-size:16px">update</span>更新履歴</div>
+      <button class="m-close" onclick="cm('page-history')">✕</button>
+    </div>
+    <div class="page-body">
+      <h2>更新履歴</h2>
+      <p class="page-subtitle">ガンちゃんのバージョンアップ内容をご確認いただけます</p>
+      <div>
+        <div class="history-entry"><div class="history-ver">v2.5</div><div class="history-date">2026-04-02</div><div class="history-desc"><strong>多言語・ヘルプ・フッター</strong>：設定画面（JP/EN切替・文字サイズ）、ヘルプページ、新規プロジェクト作成ボタン、フッター（ロゴ・リンク集）を追加。Project Health を円グラフに刷新。</div></div>
+        <div class="history-entry"><div class="history-ver">v2.4</div><div class="history-date">2026-04-01</div><div class="history-desc"><strong>Architectural Ledger デザイン</strong>：サイドバー、グラスモーフィズムヘッダー、操作履歴パネル、Project Health パネル追加。Manrope + Inter フォント採用。</div></div>
+        <div class="history-entry"><div class="history-ver">v2.3</div><div class="history-date">2026-04-01</div><div class="history-desc"><strong>デザイン刷新</strong>：デザイナー案をもとに青基調ライトテーマに変更。土曜・祝日の色分けを仕様通りに修正。</div></div>
+        <div class="history-entry"><div class="history-ver">v2.2</div><div class="history-date">2026-04-01</div><div class="history-desc"><strong>ドラッグ並び替え</strong>：タスク一覧の「⠿」ハンドルでドラッグ＆ドロップによる順序変更が可能に。</div></div>
+        <div class="history-entry"><div class="history-ver">v2.1</div><div class="history-date">2026-04-01</div><div class="history-desc"><strong>内部ドキュメント強化</strong>：api.php を v2.0 仕様に更新。修正履歴・リファレンスの生成内容を強化。</div></div>
+        <div class="history-entry"><div class="history-ver">v2.0</div><div class="history-date">2026-04-01</div><div class="history-desc"><strong>メジャーアップデート</strong>：デザイン全面刷新（DM Sans + Syne）。プロジェクト共有 URL コピー、会社別バーカラー統一、タスク追加時の日付自動補完を追加。</div></div>
+        <div class="history-entry"><div class="history-ver">v1.0</div><div class="history-date">2026-03</div><div class="history-desc"><strong>初版リリース</strong>：ガントチャート基本機能、JSON保存、祝日自動取得、⚡ イナズマ線、今日ラインを実装。</div></div>
+      </div>
+    </div>
+    <div class="m-foot">
+      <button class="btn btn-cta" onclick="cm('page-history')">閉じる</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ PAGE: リファレンス ══════════════ -->
+<div class="overlay" id="page-reference">
+  <div class="modal page-modal">
+    <div class="m-hdr">
+      <div class="m-title"><span class="mi" style="font-size:16px">menu_book</span>リファレンス</div>
+      <button class="m-close" onclick="cm('page-reference')">✕</button>
+    </div>
+    <div class="page-body">
+      <h2>リファレンス</h2>
+      <p class="page-subtitle">ガンちゃんの技術仕様・ファイル構成・データ構造の詳細情報</p>
+      <h3>ファイル構成</h3>
+      <table>
+        <tr><th>ファイル</th><th>説明</th></tr>
+        <tr><td>index.html</td><td>メインアプリケーション（フロントエンド全体）</td></tr>
+        <tr><td>api.php</td><td>バックエンドAPI（データ保存・履歴生成）</td></tr>
+        <tr><td>data/gantt_data.json</td><td>プロジェクトデータ本体（保存時に上書き）</td></tr>
+        <tr><td>data/ガンちゃん_修正履歴.md</td><td>操作履歴（保存時に末尾追記）</td></tr>
+        <tr><td>data/ガンちゃん_リファレンス.md</td><td>リファレンス（保存時に自動再生成）</td></tr>
+      </table>
+      <h3>gantt_data.json データ構造</h3>
+      <div class="info-box" style="font-family:'JetBrains Mono',monospace;font-size:11px;white-space:pre-wrap">{
+  "project": { "name": "プロジェクト名", "start_date": "YYYY-MM-DD", "end_date": "YYYY-MM-DD" },
+  "tasks": [
+    {
+      "id": "t_1234567890",
+      "name": "タスク名",
+      "company": "担当会社名",
+      "assignee": "担当者名",
+      "planned_start": "YYYY-MM-DD",
+      "planned_end": "YYYY-MM-DD",
+      "progress": 0,
+      "color": "#005bc4",
+      "memo": "備考"
+    }
+  ],
+  "lightning_date": "YYYY-MM-DD",
+  "sl": false,
+  "coColors": { "会社名": "#005bc4" }
+}</div>
+      <h3>システム要件</h3>
+      <table>
+        <tr><td>サーバー</td><td>PHP 7.4 以上</td></tr>
+        <tr><td>権限</td><td>data/ ディレクトリへの書き込み権限（chmod 755）</td></tr>
+        <tr><td>ブラウザ</td><td>Chrome / Firefox / Edge / Safari 最新版</td></tr>
+        <tr><td>インターネット</td><td>祝日API・Google Fonts の取得に使用</td></tr>
+      </table>
+      <h3>キーボードショートカット</h3>
+      <table>
+        <tr><td>Ctrl+S / ⌘+S</td><td>データ保存</td></tr>
+        <tr><td>Esc</td><td>モーダルを閉じる</td></tr>
+      </table>
+    </div>
+    <div class="m-foot">
+      <button class="btn btn-cta" onclick="cm('page-reference')">閉じる</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ PAGE: 個人情報保護方針 ══════════════ -->
+<div class="overlay" id="page-privacy">
+  <div class="modal page-modal">
+    <div class="m-hdr">
+      <div class="m-title"><span class="mi" style="font-size:16px">lock</span>個人情報保護方針</div>
+      <button class="m-close" onclick="cm('page-privacy')">✕</button>
+    </div>
+    <div class="page-body">
+      <h2>個人情報保護方針</h2>
+      <p class="page-subtitle">最終更新日：2026年4月2日</p>
+      <p>株式会社好循環（以下「当社」）は、個人情報の保護に関する法律（個人情報保護法）およびその他の関係法令を遵守し、以下の方針に基づき個人情報の適正な取扱いに努めます。</p>
+
+      <h3>1. 個人情報の定義</h3>
+      <p>本方針において「個人情報」とは、個人情報保護法第2条第1項に定義される個人情報、すなわち生存する個人に関する情報であって、当該情報に含まれる氏名、メールアドレス等によって特定の個人を識別できるものをいいます。</p>
+
+      <h3>2. 個人情報の収集</h3>
+      <p>当社は、本サービスの「お問い合わせフォーム」を通じて以下の個人情報を取得することがあります。</p>
+      <ul>
+        <li>氏名・会社名・組織名</li>
+        <li>メールアドレス</li>
+        <li>お問い合わせ内容</li>
+      </ul>
+      <p>なお、本サービスのガントチャート機能はログイン不要であり、個人情報の収集は行いません。</p>
+
+      <h3>3. 個人情報の利用目的</h3>
+      <p>取得した個人情報は、以下の目的のためにのみ利用します。</p>
+      <ul>
+        <li>お問い合わせへの回答・対応</li>
+        <li>本サービスに関するご連絡</li>
+        <li>サービス改善のための統計情報の集計（個人を特定しない形で）</li>
+      </ul>
+
+      <h3>4. 個人情報の第三者への提供</h3>
+      <p>当社は、法令に基づく場合を除き、取得した個人情報をご本人の同意なく第三者に提供することはありません。</p>
+
+      <h3>5. 個人情報の管理</h3>
+      <p>当社は、取得した個人情報について漏えい・滅失・毀損の防止のため、適切なセキュリティ対策を実施します。当社はセキュリティアクション★★を宣言しており、情報セキュリティに関する取組みを継続的に実施しています。</p>
+
+      <h3>6. 個人情報の開示・訂正・削除</h3>
+      <p>ご本人から個人情報の開示・訂正・削除のご請求があった場合は、合理的な期間内に対応いたします。お問い合わせフォームよりご連絡ください。</p>
+
+      <h3>7. Cookieの使用について</h3>
+      <p>本サービスは現在Cookieを使用しておりません。なお、外部APIへのアクセス（祝日データ取得・Google Fontsの読み込み）が発生しますが、これらは個人情報の収集を目的とするものではありません。</p>
+
+      <h3>8. プライバシーポリシーの変更</h3>
+      <p>当社は、本方針を適宜見直し、改善する場合があります。変更後の方針は本ページに掲示した時点で効力を生じるものとします。</p>
+
+      <h3>9. お問い合わせ窓口</h3>
+      <table>
+        <tr><td>会社名</td><td>株式会社好循環</td></tr>
+        <tr><td>Webサイト</td><td><a href="https://kojunkan.jp" target="_blank" rel="noopener">https://kojunkan.jp</a></td></tr>
+        <tr><td>お問い合わせ</td><td><a href="#" onclick="cm('page-privacy');sm('page-contact')">お問い合わせフォーム</a></td></tr>
+      </table>
+    </div>
+    <div class="m-foot">
+      <button class="btn btn-cta" onclick="cm('page-privacy')">閉じる</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ SCRIPT ══════════════ -->
+<script>
+'use strict';
+
+/* ─── i18n ───────────────────────────────────── */
+const I18N = {
+  ja: {
+    settings:'設定', help:'ヘルプ', new_project:'新規プロジェクト', add_task:'タスクを追加',
+    save:'保存', share:'プロジェクト共有', period:'表示期間', lightning:'⚡ イナズマ線',
+    col_task:'タスク名 / 担当者', col_org:'組織名', col_start:'開始', col_end:'終了', col_prog:'進捗',
+    empty_msg:'「タスクを追加」で\nタスクを登録してください',
+    activity_log:'操作履歴', ph_label:'Project Health', ph_progress:'全体進捗',
+    ph_done:'完了', ph_inprog:'進行中', ph_delay:'遅延',
+    settings_title:'設定', settings_lang:'🌐 表示言語', settings_fontsize:'🔡 文字サイズ',
+    close:'閉じる', cancel:'キャンセル', delete:'削除', save_task:'保存する',
+    lbl_name:'タスク名 *', lbl_org:'担当組織名', lbl_assignee:'担当者名',
+    lbl_start:'計画開始日 *', lbl_end:'計画終了日 *', lbl_progress:'進捗率',
+    lbl_color:'バーカラー', lbl_memo:'メモ / 備考',
+    status_on_time:'オンタイム', status_delayed:'遅延あり', status_ahead:'順調',
+    status_in_prog:'進行中', status_none:'—',
+    today:'今日', unsaved:'未保存', saved_at:'保存済 ',
+    fs_sm:'小', fs_md:'中（標準）', fs_lg:'大',
+  },
+  en: {
+    settings:'Settings', help:'Help', new_project:'New Project', add_task:'Add Task',
+    save:'Save', share:'Share Project', period:'Period', lightning:'⚡ Lightning',
+    col_task:'Task / Assignee', col_org:'Organization', col_start:'Start', col_end:'End', col_prog:'Progress',
+    empty_msg:'Click "Add Task"\nto register tasks',
+    activity_log:'Activity Log', ph_label:'Project Health', ph_progress:'Overall',
+    ph_done:'Done', ph_inprog:'In Progress', ph_delay:'Delayed',
+    settings_title:'Settings', settings_lang:'🌐 Language', settings_fontsize:'🔡 Font Size',
+    close:'Close', cancel:'Cancel', delete:'Delete', save_task:'Save',
+    lbl_name:'Task Name *', lbl_org:'Organization', lbl_assignee:'Assignee',
+    lbl_start:'Planned Start *', lbl_end:'Planned End *', lbl_progress:'Progress',
+    lbl_color:'Bar Color', lbl_memo:'Notes',
+    status_on_time:'On Time', status_delayed:'Delayed', status_ahead:'Ahead',
+    status_in_prog:'In Progress', status_none:'—',
+    today:'Today', unsaved:'Unsaved', saved_at:'Saved ',
+    fs_sm:'S', fs_md:'M (Default)', fs_lg:'L',
+  }
+};
+
+let _lang    = 'ja';
+let _fsMode  = 'md';
+
+function t(key) { return (I18N[_lang] && I18N[_lang][key]) || I18N.ja[key] || key }
+
+function applyI18n() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    const val = t(key);
+    if (el.tagName === 'INPUT' && el.type !== 'button') {
+      // skip input values
+    } else {
+      // Handle \n in empty-msg
+      if (el.classList.contains('empty-msg') || el.tagName === 'P') {
+        el.innerHTML = val.replace(/\n/g,'<br>');
+      } else {
+        el.textContent = val;
+      }
+    }
+  });
+  // Specific elements
+  const lsEl = g('ls');
+  if (lsEl && lsEl.textContent === t('unsaved')) lsEl.textContent = t('unsaved');
+  // Font size buttons
+  g('fs-sm').textContent = t('fs_sm');
+  g('fs-md').textContent = t('fs_md');
+  g('fs-lg').textContent = t('fs_lg');
+  // Title
+  document.title = _lang==='en' ? 'Gan-chan | Gantt' : 'ガンちゃん';
+  g('help-title').textContent = _lang==='en' ? 'Gan-chan — Help' : 'ガンちゃん — ヘルプ';
+  // Re-render health status
+  renderHealth();
+  // Update lbtn text if ON
+  if (A.sl) g('lbtn').textContent = '⚡ ON';
+  // Rerender left panel labels
+  renderHelpBody();
+}
+
+function setLang(lang) {
+  _lang = lang;
+  g('lang-ja').classList.toggle('active', lang==='ja');
+  g('lang-en').classList.toggle('active', lang==='en');
+  applyI18n();
+  ra();
+  toast(lang==='ja' ? '日本語に切り替えました' : 'Switched to English', 'inf');
+}
+
+function setFontSize(mode) {
+  _fsMode = mode;
+  document.body.classList.remove('fs-sm','fs-lg');
+  if (mode==='sm') document.body.classList.add('fs-sm');
+  if (mode==='lg') document.body.classList.add('fs-lg');
+  ['fs-sm','fs-md','fs-lg'].forEach(id => g(id).classList.toggle('active', id===`fs-${mode}`));
+}
+
+
+/* ─── Project ID 管理 ────────────────────────────────────── */
+function genPid(){ return Math.random().toString(36).slice(2,10)+Math.random().toString(36).slice(2,6); }
+const _urlPid = new URLSearchParams(location.search).get('p');
+const _pid    = (_urlPid && /^[a-zA-Z0-9_\-]{1,32}$/.test(_urlPid)) ? _urlPid : null;
+
+// LP制御: ?p=なし→LP表示。sidebar/mainは一切触らない
+(function(){
+  if (!_pid) {
+    var lp = document.getElementById('landing');
+    if (lp) lp.style.display = 'flex';
+  }
+})();
+
+// アプリを開始する（LPの「無料で使う」ボタン用）
+function startApp(){
+  const pid = genPid();
+  window.location.href = location.href.split('?')[0] + '?p=' + pid;
+}
+
+// アプリ初期化時のみ使う pid
+const _appPid = _pid || genPid();
+
+/* ─── Color Palette ──────────────────────────── */
+const PAL = [
+  '#005bc4','#006d4a','#565e74','#9f403d','#e65100',
+  '#6a0dad','#00695c','#b76700','#004d70','#5d4037'
+];
+
+/* ─── App State ──────────────────────────────── */
+const A = {
+  project: { name:'新規プロジェクト', start_date:'', end_date:'' },
+  tasks: [], lightning_date:'', sl:false, holidays:{}, coColors:{}
+};
+
+let selColor = PAL[0], _lk = false;
+
+/* ─── Activity Log ───────────────────────────── */
+const _actLog = [];
+function logActivity(text, hl='') {
+  const now=new Date();
+  const ti=String(now.getHours()).padStart(2,'0')+':'+String(now.getMinutes()).padStart(2,'0');
+  _actLog.unshift({time:ti,text,hl});
+  if(_actLog.length>20)_actLog.pop();
+  renderActLog();
+}
+function renderActLog() {
+  const el=g('al-list');
+  if(!_actLog.length){
+    el.innerHTML=`<div class="al-item"><span class="al-time">--:--</span><span class="al-text" style="color:var(--outline-v)">${_lang==='en'?'Activity log will appear here':'操作履歴はここに表示されます'}</span></div>`;
+    return;
+  }
+  el.innerHTML=_actLog.slice(0,6).map(e=>`
+    <div class="al-item">
+      <span class="al-time">${e.time}</span>
+      <span class="al-text">${e.hl?e.text.replace(e.hl,`<span class="hl">${esc(e.hl)}</span>`):e.text}</span>
+    </div>`).join('');
+}
+
+/* ─── Project Health ─────────────────────────── */
+function renderHealth() {
+  const total = A.tasks.length;
+  if (!total) {
+    g('ph-status').textContent = t('status_none');
+    g('ph-pct-big').textContent = '0%';
+    g('ph-done').textContent  = '0';
+    g('ph-prog').textContent  = '0';
+    g('ph-delay').textContent = '0';
+    g('ph-ring').setAttribute('stroke-dasharray','0 207');
+    return;
+  }
+  const avg     = Math.round(A.tasks.reduce((s,t)=>s+t.progress,0)/total);
+  const today   = toS(new Date());
+  const done    = A.tasks.filter(t=>t.progress>=100).length;
+  const inProg  = A.tasks.filter(t=>t.progress>0&&t.progress<100).length;
+  const delayed = A.tasks.filter(t=>t.progress<100&&t.planned_end&&today>t.planned_end).length;
+
+  const status = delayed>0 ? t('status_delayed') : avg>=80 ? t('status_ahead') : avg>=20 ? t('status_on_time') : t('status_in_prog');
+
+  g('ph-status').textContent = status;
+  g('ph-pct-big').textContent = avg+'%';
+  g('ph-done').textContent   = done;
+  g('ph-prog').textContent   = inProg;
+  g('ph-delay').textContent  = delayed;
+
+  // Circle: circumference = 2π×33 ≈ 207.3
+  const circ = 2 * Math.PI * 33;
+  const filled = circ * avg / 100;
+  g('ph-ring').setAttribute('stroke-dasharray', `${filled.toFixed(1)} ${(circ-filled).toFixed(1)}`);
+}
+
+/* ─── Confirm Dialog ─────────────────────────── */
+function showConfirm(msg, onOk) {
+  g('confirm-msg').textContent = msg;
+  g('confirm-ok').textContent  = _lang==='en' ? 'Execute' : '実行する';
+  g('confirm-ok').onclick = () => { cm('confirm-modal'); onOk(); };
+  sm('confirm-modal');
+}
+
+/* ─── New Project ────────────────────────────── */
+function confirmNewProject() {
+  const msg = _lang==='en'
+    ? 'Create a new project? (Current project is preserved. A new URL will open.)'
+    : '新規プロジェクトを作成しますか？\n（現在のプロジェクトは保持されます。新しいURLで開きます。）';
+  showConfirm(msg, () => {
+    const newPid = genPid();
+    window.location.href = location.href.split('?')[0] + '?p=' + newPid;
+  });
+}
+
+/* ─── Help Body ──────────────────────────────── */
+function renderHelpBody() {
+  const isEn = _lang==='en';
+  g('help-body').innerHTML = `
+  <div class="help-section">
+    <h3><span class="mi">keyboard</span>${isEn?'Keyboard Shortcuts':'キーボードショートカット'}</h3>
+    <table class="help-table">
+      <tr><th>${isEn?'Key':'キー'}</th><th>${isEn?'Action':'動作'}</th></tr>
+      <tr><td><span class="kbd">Ctrl</span>+<span class="kbd">S</span></td><td>${isEn?'Save data':'データを保存'}</td></tr>
+      <tr><td><span class="kbd">Esc</span></td><td>${isEn?'Close modal':'モーダルを閉じる'}</td></tr>
+    </table>
+  </div>
+
+  <div class="help-section">
+    <h3><span class="mi">drag_indicator</span>${isEn?'Basic Operations':'基本操作'}</h3>
+    <table class="help-table">
+      <tr><th>${isEn?'Action':'操作'}</th><th>${isEn?'How':'方法'}</th></tr>
+      <tr><td>${isEn?'Add Task':'タスク追加'}</td><td>${isEn?'"Add Task" button in toolbar':'ツールバーの「タスクを追加」ボタン'}</td></tr>
+      <tr><td>${isEn?'Edit Task':'タスク編集'}</td><td>${isEn?'Click the task row or bar':'左パネルの行またはガントバーをクリック'}</td></tr>
+      <tr><td>${isEn?'Reorder Tasks':'タスク並び替え'}</td><td>${isEn?'Drag the ⠿ handle':'⠿ ハンドルをドラッグ＆ドロップ'}</td></tr>
+      <tr><td>${isEn?'Save':'保存'}</td><td>${isEn?'"Save" button or Ctrl+S':'「保存」ボタン または Ctrl+S'}</td></tr>
+      <tr><td>${isEn?'Share URL':'URL共有'}</td><td>${isEn?'"Share Project" copies URL to clipboard':'「プロジェクト共有」でURLをコピー'}</td></tr>
+    </table>
+  </div>
+
+  <div class="help-section">
+    <h3><span class="mi">bolt</span>${isEn?'Lightning Line (イナズマ線)':'イナズマ線について'}</h3>
+    <p style="font-size:calc(var(--fs-base) - 1px);color:var(--on-surface-v);line-height:1.8;margin-bottom:8px">
+      ${isEn
+        ?'The lightning line visualizes the gap between planned and actual progress. Set a reference date and toggle ON.'
+        :'基準日時点での「計画進捗」と「実績進捗」のズレを可視化します。基準日を設定してONにしてください。'}
+    </p>
+    <table class="help-table">
+      <tr><td>${isEn?'🟡 Dashed line':'🟡 縦破線'}</td><td>${isEn?'Reference date':'基準日ライン'}</td></tr>
+      <tr><td>${isEn?'🟢 Green dot':'🟢 緑丸'}</td><td>${isEn?'Ahead of schedule':'前倒し（実績 > 計画）'}</td></tr>
+      <tr><td>${isEn?'🔴 Red dot':'🔴 赤丸'}</td><td>${isEn?'Behind schedule':'遅延（実績 < 計画）'}</td></tr>
+    </table>
+  </div>
+
+  <div class="help-section">
+    <h3><span class="mi">calendar_today</span>${isEn?'Holiday & Weekend Colors':'祝日・休日の色分け'}</h3>
+    <div class="help-note">
+      ${isEn
+        ?'<strong>What is the holiday indicator?</strong> The app automatically downloads Japan\'s public holiday data from an external API (holidays-jp.github.io) at startup. The indicator in the header shows whether the download succeeded. When successful, holidays are highlighted in the calendar — you don\'t need to set them manually.'
+        :'<strong>「祝日 54件 ✓」とは？</strong> アプリ起動時に、日本の国民の祝日データを外部API（holidays-jp.github.io）から自動取得しています。取得に成功すると件数が表示され、カレンダー上の祝日が自動で色付けされます。手動設定は不要です。'}
+    </div>
+    <table class="help-table" style="margin-top:10px">
+      <tr><td style="color:var(--secondary)">${isEn?'Blue background':'薄い青背景'}</td><td>${isEn?'Saturday':'土曜日'}</td></tr>
+      <tr><td style="color:var(--red)">${isEn?'Red background':'薄い赤背景'}</td><td>${isEn?'Sunday / Public Holiday':'日曜日・祝日'}</td></tr>
+      <tr><td style="color:var(--secondary)">${isEn?'Blue highlight':'シアン強調'}</td><td>${isEn?'Today':'今日'}</td></tr>
+    </table>
+  </div>
+
+  <div class="help-section">
+    <h3><span class="mi">bar_chart</span>${isEn?'Task Bar Colors':'タスクバーの色'}</h3>
+    <table class="help-table">
+      <tr><td style="color:var(--tertiary)">●</td><td>${isEn?'Completed (progress 100%)':'完了（進捗100%）'}</td></tr>
+      <tr><td style="color:var(--secondary)">●</td><td>${isEn?'In Progress':'進行中（進捗1〜99%）'}</td></tr>
+      <tr><td style="color:#9f403d">●</td><td>${isEn?'Delayed (past end date, not done)':'遅延（終了日超過・未完了）'}</td></tr>
+      <tr><td style="color:var(--primary)">●</td><td>${isEn?'Not started':'未着手（進捗0%）'}</td></tr>
+    </table>
+  </div>
+  `;
+}
+
+/* ─── Utils ──────────────────────────────────── */
+const g    = id => document.getElementById(id);
+const esc  = s  => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+const sm   = id => g(id).classList.add('show');
+const cm_  = id => g(id).classList.remove('show');
+function cm(id){ cm_(id) }
+function toS(d){ return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0') }
+function frS(s){ return new Date(s+'T00:00:00') }
+function offD(s,n){ const d=frS(s); d.setDate(d.getDate()+n); return toS(d) }
+function dIdx(b,t){ return Math.round((frS(t)-frS(b))/86400000) }
+function gDays(s,e){ const ds=[],c=frS(s),l=frS(e); while(c<=l){ds.push(toS(c));c.setDate(c.getDate()+1)} return ds }
+function fs2(s){ if(!s)return'—'; const d=frS(s); return(d.getMonth()+1)+'/'+d.getDate() }
+const DOW_JA=['日','月','火','水','木','金','土'];
+const DOW_EN=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+const dow = d => (_lang==='en'?DOW_EN:DOW_JA)[frS(d).getDay()];
+const isSat=d=>frS(d).getDay()===6;
+const isSun=d=>frS(d).getDay()===0;
+const isHol=d=>!!A.holidays[d];
+function dCls(d){ const t=toS(new Date()); if(d===t)return'd-cell tod'; if(isHol(d))return'd-cell hol'; if(isSun(d))return'd-cell sun'; if(isSat(d))return'd-cell sat'; return'd-cell' }
+function gCls(d){ const t=toS(new Date()); if(d===t)return'g-cell tod'; if(isHol(d))return'g-cell hol'; if(isSun(d))return'g-cell sun'; if(isSat(d))return'g-cell sat'; return'g-cell' }
+function barCls(t){
+  if(t.progress>=100)return'bar-completed';
+  const today=toS(new Date());
+  if(t.planned_end&&today>t.planned_end&&t.progress<100)return'bar-delayed';
+  if(t.progress>0)return'bar-active';
+  return'bar-none';
+}
+function toast(msg,type='inf',icon=''){
+  const el=document.createElement('div'); el.className='toast '+type;
+  el.innerHTML=(icon?`<span>${icon}</span>`:'')+`<span>${msg}</span>`;
+  g('toast-area').appendChild(el); setTimeout(()=>el.remove(),3200);
+}
+
+/* ─── Company Color ──────────────────────────── */
+function rebuildCoColors(){ A.coColors={}; A.tasks.forEach(t=>{if(t.company&&!A.coColors[t.company])A.coColors[t.company]=t.color}) }
+
+/* ─── Holidays ───────────────────────────────── */
+async function fetchH(){
+  const lbl=g('hd-lbl'), dot=g('hd-dot');
+  if(lbl) lbl.textContent = _lang==='en'?'Loading holidays…':'祝日取得中…';
+  try{
+    const r=await fetch('https://holidays-jp.github.io/api/v1/date.json');
+    if(!r.ok)throw 0;
+    A.holidays=await r.json();
+    if(dot)dot.classList.add('ok');
+    // ⑤ Move indicator to sub-bar only; don't clutter header — silently done
+    ra();
+  }catch{
+    A.holidays={'2025-01-01':'元日','2025-01-13':'成人の日','2025-02-11':'建国記念の日','2025-02-23':'天皇誕生日','2025-03-20':'春分の日','2025-04-29':'昭和の日','2025-05-03':'憲法記念日','2025-05-04':'みどりの日','2025-05-05':'こどもの日','2025-07-21':'海の日','2025-08-11':'山の日','2025-09-15':'敬老の日','2025-09-23':'秋分の日','2025-10-13':'スポーツの日','2025-11-03':'文化の日','2025-11-23':'勤労感謝の日','2026-01-01':'元日','2026-01-12':'成人の日','2026-02-11':'建国記念の日','2026-02-23':'天皇誕生日','2026-03-20':'春分の日','2026-04-29':'昭和の日','2026-05-03':'憲法記念日','2026-05-04':'みどりの日','2026-05-05':'こどもの日','2026-07-20':'海の日','2026-08-11':'山の日','2026-09-21':'敬老の日','2026-09-23':'秋分の日','2026-10-12':'スポーツの日','2026-11-03':'文化の日','2026-11-23':'勤労感謝の日','2027-01-01':'元日','2027-01-11':'成人の日','2027-02-11':'建国記念の日','2027-02-23':'天皇誕生日','2027-03-21':'春分の日','2027-04-29':'昭和の日','2027-05-03':'憲法記念日','2027-05-04':'みどりの日','2027-05-05':'こどもの日'};
+    if(dot)dot.classList.add('ok');
+    ra();
+  }
+}
+
+/* ─── Render ─────────────────────────────────── */
+function onVC(){ A.project.start_date=g('vs').value; A.project.end_date=g('ve').value; ra() }
+function ra(){ rl(); rr(); renderHealth() }
+
+/* ── Hierarchy helpers ── */
+function _taskDepth(id){
+  let d=0,cur=A.tasks.find(t=>t.id===id);
+  while(cur&&cur.parentId){d++;cur=A.tasks.find(t=>t.id===cur.parentId);}
+  return d;
+}
+function _hasChildren(id){ return A.tasks.some(t=>t.parentId===id); }
+function getVisibleTasks(){
+  const result=[];
+  function walk(pid){
+    A.tasks.filter(t=>(t.parentId||null)===(pid||null)).forEach(t=>{
+      result.push(t);
+      if(!t._collapsed) walk(t.id);
+    });
+  }
+  walk(null);
+  return result;
+}
+function toggleCollapse(id,e){
+  e.stopPropagation();
+  const tk=A.tasks.find(t=>t.id===id);
+  if(tk) tk._collapsed=!tk._collapsed;
+  ra();
+}
+function addChildTask(parentId,e){
+  e.stopPropagation();
+  openM(null,parentId);
+}
+/* ── アウトデント: 子タスクを1段階上に昇格 ── */
+function promoteTask(id,e){
+  e.stopPropagation();
+  const tk=A.tasks.find(t=>t.id===id);
+  if(!tk||!tk.parentId){ toast(_lang==='en'?'Already a root task':'既にルートタスクです','inf'); return; }
+  const oldPar=A.tasks.find(t=>t.id===tk.parentId);
+  tk.parentId=oldPar?(oldPar.parentId||null):null;
+  ra();
+  const msg=tk.parentId
+    ?(_lang==='en'?`"${tk.name}" moved up one level`:`「${tk.name}」を1段階上に移動しました`)
+    :(_lang==='en'?`"${tk.name}" promoted to root`:`「${tk.name}」をルートタスクに昇格しました`);
+  toast(msg,'ok','↑'); logActivity(msg,tk.name);
+}
+
+function rl(){
+  const el=g('ts');
+  if(!A.tasks.length){
+    el.innerHTML=`<div class="empty-msg"><div class="e-ico">📊</div><p data-i18n="empty_msg">${t('empty_msg').replace(/\n/g,'<br>')}</p></div>`;
+    return;
+  }
+  const vis=getVisibleTasks();
+  el.innerHTML=vis.map(tk=>{
+    const depth=_taskDepth(tk.id);
+    const hasCh=_hasChildren(tk.id);
+    const colBtn=hasCh
+      ?`<span class="collapse-btn${tk._collapsed?' closed':''}" onclick="toggleCollapse('${tk.id}',event)">▼</span>`
+      :`<span style="display:inline-block;width:16px;flex-shrink:0;margin-right:3px"></span>`;
+    const indent=depth*18;
+    return `
+    <div class="t-row depth-${Math.min(depth,2)}" draggable="true" data-id="${tk.id}" style="--rc:${tk.color}">
+      <div class="c-no"><span class="drag-handle" title="${_lang==='en'?'Drag to reorder':'ドラッグして並び替え'}">⠿</span></div>
+      <div class="c-nm" style="padding-left:${6+indent}px">
+        ${colBtn}
+        <span class="c-swatch" style="background:${tk.color}"></span>
+        <span class="c-nm-in" title="${esc(tk.name)}">${esc(tk.name)}</span>
+      </div>
+      <div class="c-co">
+        <span class="co">${esc(tk.company||'')}</span>
+        <span class="pe">${esc(tk.assignee||'')}</span>
+      </div>
+      <div class="c-dt">${fs2(tk.planned_start)}</div>
+      <div class="c-dt">${fs2(tk.planned_end)}</div>
+      <div class="c-pr"><span class="pr-badge" style="background:${tk.color}">${tk.progress}%</span></div>
+      ${tk.parentId?`<button class="promote-btn" onclick="promoteTask('${tk.id}',event)" title="${_lang==='en'?'Outdent (promote to parent)':'アウトデント（1段階上に昇格）'}">↑</button>`:''}
+      <button class="add-child-btn" onclick="addChildTask('${tk.id}',event)" title="${_lang==='en'?'Add child task':'子タスクを追加'}">＋</button>
+    </div>`;
+  }).join('');
+  el.querySelectorAll('.t-row').forEach(r=>{
+    const c=r.style.getPropertyValue('--rc');
+    r.addEventListener('mouseenter',function(){ this.style.boxShadow=`inset 3px 0 0 ${c}` });
+    r.addEventListener('mouseleave',function(){ this.style.boxShadow='' });
+    r.addEventListener('click',function(){ if(!_dragging)openM(this.dataset.id) });
+  });
+  initDragDrop(el);
+  // 列幅を再適用
+  if(window._applyColWidth && window._colNameW) window._applyColWidth(window._colNameW);
+}
+
+function rr(){
+  const s=g('vs').value, e=g('ve').value;
+  if(!s||!e||s>e)return;
+  const days=gDays(s,e), DW=36, W=days.length*DW, today=toS(new Date());
+  const ms=[];
+  days.forEach(d=>{
+    const dt=frS(d);
+    const key=dt.getFullYear()+'/'+(dt.getMonth()+1);
+    let lbl; if(_lang==='en'){const mn=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];lbl=mn[dt.getMonth()]+' '+dt.getFullYear();}
+    else lbl=dt.getFullYear()+'年'+(dt.getMonth()+1)+'月';
+    if(!ms.length||ms[ms.length-1].key!==key)ms.push({key,lbl,c:1});else ms[ms.length-1].c++;
+  });
+  const mH=ms.map(m=>`<div class="m-cell" style="width:${m.c*DW}px">${m.lbl}</div>`).join('');
+  const dH=days.map(d=>{const dt=frS(d),tip=A.holidays[d]||'';return`<div class="${dCls(d)}" title="${tip}"><span class="dn">${dt.getDate()}</span><span class="dw">${dow(d)}</span></div>`}).join('');
+  const rH=getVisibleTasks().map(tk=>{
+    const cells=days.map(d=>`<div class="${gCls(d)}"></div>`).join('');
+    const si=dIdx(s,tk.planned_start),ei=dIdx(s,tk.planned_end);
+    const csi=Math.max(0,si),cei=Math.min(days.length-1,ei);
+    let bar='';
+    if(si<=days.length-1&&ei>=0){
+      const bl=csi*DW,bw=Math.max(DW,(cei-csi+1)*DW),fw=Math.round(bw*tk.progress/100);
+      const bc=barCls(tk);
+      const isDelay=bc==='bar-delayed';
+      const txtClr=isDelay?'var(--err-on)':'rgba(255,255,255,.95)';
+      const lbl=isDelay?`${esc(tk.name)} [${_lang==='en'?'DELAY':'遅延'}]`:esc(tk.name);
+      bar=`<div class="t-bar ${bc}" style="left:${bl}px;width:${bw}px"
+        onclick="openM('${tk.id}');event.stopPropagation()" title="${esc(tk.name)} — ${tk.progress}%">
+        <div class="bar-bg" style="background:${tk.color}"></div>
+        <div class="bar-fill${tk.progress>=100?' full':''}" style="background:${tk.color};width:${tk.progress}%"></div>
+        <div class="bar-txt">${lbl}</div>
+      </div>`;
+    }
+    return`<div class="ch-row"><div style="display:flex;width:${W}px;flex-shrink:0">${cells}</div><div class="bars-lyr">${bar}</div></div>`;
+  }).join('')||`<div style="padding:50px;text-align:center;color:var(--outline-v);font-size:13px;font-weight:600">${_lang==='en'?'Add tasks to see the chart':'タスクを追加してください'}</div>`;
+  const ti=dIdx(s,today);
+  const tvl=(ti>=0&&ti<days.length)?`<div class="tod-line" data-lbl="${t('today')}" style="left:${ti*DW+DW/2}px"></div>`:'';
+  const lH=A.sl?bLi(days,s,DW):'';
+  g('cw').innerHTML=`<div style="min-width:${W}px;background:var(--s-lowest)">
+    <div class="tl-hdr"><div class="m-row">${mH}</div><div class="d-row">${dH}</div></div>
+    <div class="ch-rows" style="position:relative">${rH}${tvl}${lH}</div>
+  </div>`;
+}
+
+/* ─── Lightning ──────────────────────────────── */
+function bLi(days,start,DW){
+  if(!A.tasks.length)return'';
+  const ld=A.lightning_date||toS(new Date()),li=dIdx(start,ld);
+  if(li<0||li>=days.length)return'';
+  const RH=44,lx=li*DW+DW/2,TH=A.tasks.length*RH,TW=days.length*DW;
+  const p=[];
+  p.push(`<line x1="${lx}" y1="0" x2="${lx}" y2="${TH}" stroke="#005bc4" stroke-width="2" stroke-dasharray="5,3" opacity="0.7"/>`);
+  const dt=frS(ld),lf=(dt.getMonth()+1)+'/'+dt.getDate();
+  p.push(`<rect x="${lx-22}" y="2" width="44" height="18" rx="4" fill="#005bc4"/>
+    <text x="${lx}" y="14.5" text-anchor="middle" fill="white" font-size="9.5" font-weight="700" font-family="'Manrope',sans-serif">⚡ ${lf}</text>`);
+  const pts=[];
+  getVisibleTasks().forEach((tk,i)=>{
+    const cy=i*RH+RH/2,si=dIdx(start,tk.planned_start),ei=dIdx(start,tk.planned_end),dur=ei-si+1;
+    let pp; if(li<si)pp=0; else if(li>ei)pp=100; else pp=dur>0?Math.round((li-si+1)/dur*100):0;
+    const ap=tk.progress,bh=ap<pp,clr=bh?'#9f403d':'#006d4a';
+    const ax=si*DW+dur*DW*ap/100;
+    pts.push({ax,cy});
+    p.push(`<circle cx="${lx}" cy="${cy}" r="4" fill="#005bc4" stroke="white" stroke-width="1.5"/>`);
+    if(Math.abs(ax-lx)>2)p.push(`<line x1="${lx}" y1="${cy}" x2="${ax}" y2="${cy}" stroke="${clr}" stroke-width="2" stroke-linecap="round" opacity="0.8"/>`);
+    p.push(`<circle cx="${ax}" cy="${cy}" r="5.5" fill="${clr}" stroke="white" stroke-width="2"/>`);
+    const df=ap-pp;
+    if(Math.abs(df)>=3){const lb=df>0?`+${df}%`:`${df}%`,x2=ax+(df>0?9:-9),an=df>0?'start':'end';p.push(`<text x="${x2}" y="${cy+4}" fill="${clr}" font-size="9" font-weight="700" text-anchor="${an}" font-family="'JetBrains Mono',monospace">${lb}</text>`);}
+  });
+  if(pts.length>1){let path=`M ${pts[0].ax} ${pts[0].cy}`;for(let i=1;i<pts.length;i++)path+=` L ${pts[i].ax} ${pts[i].cy}`;p.push(`<path d="${path}" fill="none" stroke="#005bc4" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>`);}
+  return`<svg class="lsvg" width="${TW}" height="${TH}" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 0 2px rgba(0,91,196,0.3))">${p.join('')}</svg>`;
+}
+function tl(){ A.sl=!A.sl; A.lightning_date=g('ld').value; const b=g('lbtn'); b.textContent=A.sl?'⚡ ON':'OFF'; b.classList.toggle('on',A.sl); ra() }
+
+/* ─── Drag & Drop ────────────────────────────── */
+let _dragging=false,_dragId=null,_dragOverRow=null,_dropPos=null;
+
+/* ドロップゾーン: 上30%=top(並び替え上) / 中40%=child(子タスク化) / 下30%=bottom(並び替え下) */
+function _dropZone(e,row){
+  const rect=row.getBoundingClientRect(),y=e.clientY-rect.top,h=rect.height;
+  if(y<h*0.30)return'top';
+  if(y>h*0.70)return'bottom';
+  return'child';
+}
+function _clearDrag(container){
+  container.querySelectorAll('.t-row').forEach(r=>
+    r.classList.remove('dragging','drag-over-top','drag-over-bottom','drag-over-child'));
+}
+/* 循環参照防止: draggedId が targetId の先祖かを確認 */
+function _isAncestor(draggedId,targetId){
+  let cur=A.tasks.find(t=>t.id===targetId);
+  while(cur&&cur.parentId){
+    if(cur.parentId===draggedId)return true;
+    cur=A.tasks.find(t=>t.id===cur.parentId);
+  }
+  return false;
+}
+
+function initDragDrop(container){
+  container.querySelectorAll('.t-row').forEach(row=>{
+    row.addEventListener('dragstart',e=>{
+      _dragId=row.dataset.id;_dragging=true;row.classList.add('dragging');
+      e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('text/plain',_dragId);
+      const ghost=row.cloneNode(true);
+      ghost.style.cssText='position:fixed;top:-9999px;opacity:.85;width:'+row.offsetWidth+'px;background:white;box-shadow:0 8px 24px rgba(0,0,0,.12);border-radius:8px;';
+      document.body.appendChild(ghost);e.dataTransfer.setDragImage(ghost,20,row.offsetHeight/2);
+      setTimeout(()=>document.body.removeChild(ghost),0);
+    });
+    row.addEventListener('dragend',()=>{
+      _dragging=false;_dragId=null;_clearDrag(container);
+      _dragOverRow=null;_dropPos=null;
+      const dh=document.getElementById('drop-hint'); if(dh)dh.classList.remove('show');
+    });
+    row.addEventListener('dragover',e=>{
+      e.preventDefault();e.dataTransfer.dropEffect='move';
+      const tid=row.dataset.id; if(tid===_dragId)return;
+      if(_isAncestor(_dragId,tid)){e.dataTransfer.dropEffect='none';return;}
+      const zone=_dropZone(e,row);
+      if(_dragOverRow!==row||_dropPos!==zone){
+        _clearDrag(container);
+        row.classList.add(zone==='top'?'drag-over-top':zone==='bottom'?'drag-over-bottom':'drag-over-child');
+        _dragOverRow=row;_dropPos=zone;
+        /* ツールチップ */
+        const dh=document.getElementById('drop-hint');
+        if(dh){
+          const tname=A.tasks.find(t=>t.id===tid)?.name||'';
+          dh.textContent=zone==='child'
+            ?(_lang==='en'?'↳ Make child of: ':'↳ 子タスクに: ')+tname
+            :(_lang==='en'?'Reorder':'並び替え');
+          dh.style.left=(e.clientX+12)+'px'; dh.style.top=(e.clientY-28)+'px';
+          dh.classList.add('show');
+        }
+      }
+    });
+    row.addEventListener('dragleave',e=>{
+      if(!row.contains(e.relatedTarget)){
+        row.classList.remove('drag-over-top','drag-over-bottom','drag-over-child');
+        const dh=document.getElementById('drop-hint'); if(dh)dh.classList.remove('show');
+      }
+    });
+    row.addEventListener('drop',e=>{
+      e.preventDefault();
+      const dh=document.getElementById('drop-hint'); if(dh)dh.classList.remove('show');
+      const targetId=row.dataset.id; if(!_dragId||_dragId===targetId)return;
+      if(_isAncestor(_dragId,targetId))return;
+      const zone=_dropZone(e,row);
+      const draggedTk=A.tasks.find(t=>t.id===_dragId);
+      const targetTk=A.tasks.find(t=>t.id===targetId);
+      if(!draggedTk||!targetTk)return;
+      if(zone==='child'){
+        /* 子タスク化 */
+        draggedTk.parentId=targetId;
+        if(targetTk._collapsed)targetTk._collapsed=false;
+        ra();
+        const msg=_lang==='en'
+          ?`"${draggedTk.name}" → child of "${targetTk.name}"`
+          :`「${draggedTk.name}」を「${targetTk.name}」の子タスクにしました`;
+        toast(msg,'ok','↳'); logActivity(msg,draggedTk.name);
+      }else{
+        /* 並び替え */
+        const pos=zone==='top'?'before':'after';
+        const fromIdx=A.tasks.findIndex(t=>t.id===_dragId); if(fromIdx===-1)return;
+        const[moved]=A.tasks.splice(fromIdx,1);
+        let toIdx=A.tasks.findIndex(t=>t.id===targetId);
+        A.tasks.splice(pos==='before'?toIdx:toIdx+1,0,moved);
+        ra(); logActivity(_lang==='en'?'Task order changed':'タスクの順序を変更しました');
+      }
+    });
+  });
+  container.addEventListener('dragover',e=>e.preventDefault());
+  container.addEventListener('drop',e=>{
+    if(e.target===container&&_dragId){
+      e.preventDefault();
+      const fi=A.tasks.findIndex(t=>t.id===_dragId); if(fi===-1)return;
+      const[m]=A.tasks.splice(fi,1); A.tasks.push(m); ra();
+    }
+  });
+}
+
+/* ─── Task Modal ─────────────────────────────── */
+function buildCP(sel){
+  sel=sel||selColor;
+  g('cpks').innerHTML=PAL.map(c=>`<div class="cpk ${c===sel?'sel':''}" style="background:${c}" onclick="pickC('${c}',this)"></div>`).join('');
+  selColor=sel;
+}
+function pickC(c,el){ document.querySelectorAll('.cpk').forEach(e=>e.classList.remove('sel')); el.classList.add('sel'); selColor=c }
+function onCoInput(val){
+  const hint=g('co-hint'), cos=Object.keys(A.coColors);
+  if(!cos.length){hint.innerHTML='';return}
+  hint.innerHTML=cos.map(co=>`<div class="co-tag" onclick="applyCoTag('${esc(co)}')"><span class="co-dot" style="background:${A.coColors[co]}"></span>${esc(co)}</div>`).join('');
+  const tr=val.trim(); if(tr&&A.coColors[tr])buildCP(A.coColors[tr]);
+}
+function applyCoTag(co){ g('fc').value=co; if(A.coColors[co])buildCP(A.coColors[co]); g('co-hint').innerHTML='' }
+function onStartChange(){ const s=g('fs').value,e=g('fe').value; if(!e||e<s)g('fe').value=s }
+
+function openM(id,parentId){
+  const isEdit=!!id;
+  g('m-icon').textContent=isEdit?'edit':'add_circle';
+  const par=parentId?A.tasks.find(x=>x.id===parentId):null;
+  g('m-title-txt').textContent=par
+    ?(_lang==='en'?'Add child to: ':'子タスク追加: ')+par.name
+    :isEdit?(_lang==='en'?'Edit Task':'タスク編集'):(_lang==='en'?'Add Task':'タスク追加');
+  g('dbt').style.display=isEdit?'flex':'none';
+  if(isEdit){
+    const _et=A.tasks.find(x=>x.id===id);
+    g('pbt').style.display=(_et&&_et.parentId)?'flex':'none';
+  }else{
+    g('pbt').style.display='none';
+  }
+  g('eid').value=id||''; g('epid').value=parentId||''; g('co-hint').innerHTML='';
+  if(isEdit){
+    const tk=A.tasks.find(x=>x.id===id); if(!tk)return;
+    g('fn').value=tk.name;g('fc').value=tk.company||'';g('fa').value=tk.assignee||'';
+    g('fs').value=tk.planned_start;g('fe').value=tk.planned_end;
+    g('fp').value=tk.progress;g('fpv').textContent=tk.progress+'%';
+    g('fm').value=tk.memo||'';buildCP(tk.color);
+  }else{
+    const src=par||(A.tasks[A.tasks.length-1]);
+    const def=src?src.planned_end:g('vs').value;
+    const defS=src?src.planned_start:g('vs').value;
+    g('fn').value='';g('fc').value=par?par.company||'':'';g('fa').value='';
+    g('fs').value=defS;g('fe').value=def;
+    g('fp').value=0;g('fpv').textContent='0%';g('fm').value='';
+    buildCP(PAL[A.tasks.length%PAL.length]);
+  }
+  onCoInput(''); sm('tm'); setTimeout(()=>g('fn').focus(),60);
+}
+
+function saveTask(){
+  const name=g('fn').value.trim(),sDate=g('fs').value,eDate=g('fe').value;
+  if(!name){toast(_lang==='en'?'Enter task name':'タスク名を入力してください','err');return}
+  if(!sDate||!eDate){toast(_lang==='en'?'Enter dates':'日付を入力してください','err');return}
+  if(sDate>eDate){toast(_lang==='en'?'Start must be before end':'開始日は終了日より前にしてください','err');return}
+  const id=g('eid').value, coNm=g('fc').value.trim();
+  let finalColor=selColor;
+  if(coNm&&A.coColors[coNm])finalColor=A.coColors[coNm];
+  else if(coNm&&!A.coColors[coNm])A.coColors[coNm]=selColor;
+  const _pid=g('epid').value||null;
+  const td={id:id||'t_'+Date.now(),name,company:coNm,assignee:g('fa').value.trim(),planned_start:sDate,planned_end:eDate,progress:parseInt(g('fp').value),color:finalColor,memo:g('fm').value.trim(),parentId:id?(A.tasks.find(t=>t.id===id)||{}).parentId||null:_pid,_collapsed:false};
+  if(id){const idx=A.tasks.findIndex(t=>t.id===id);if(idx!==-1){const old=A.tasks[idx];if(old.company!==coNm&&old.company){const still=A.tasks.some((t,i)=>i!==idx&&t.company===old.company);if(!still)delete A.coColors[old.company]}A.tasks[idx]=td;}}
+  else A.tasks.push(td);
+  cm('tm');ra();
+  const msg=id?(_lang==='en'?`Updated task "${name}"`:`タスク「${name}」を更新しました`):(_lang==='en'?`Added task: ${name}`:`新しいタスクを追加しました: ${name}`);
+  toast(id?(_lang==='en'?'Task updated':'タスクを更新しました'):(_lang==='en'?'Task added':'タスクを追加しました'),'ok','✓');
+  logActivity(msg, name);
+}
+
+function promoteToRoot(){
+  const id=g('eid').value; if(!id)return;
+  const tk=A.tasks.find(t=>t.id===id); if(!tk||!tk.parentId)return;
+  const oldParentName=(A.tasks.find(t=>t.id===tk.parentId)||{}).name||'';
+  showConfirm(
+    (_lang==='en'?`Remove "${tk.name}" from parent?`:`「${tk.name}」を親タスクから外しますか？`),
+    ()=>{
+      tk.parentId=null;
+      cm('tm'); ra();
+      const msg=_lang==='en'?`"${tk.name}" promoted to root`:`「${tk.name}」をルートタスクにしました`;
+      toast(msg,'ok','↑'); logActivity(msg,tk.name);
+    }
+  );
+}
+
+function delTask(){
+  const id=g('eid').value; if(!id)return;
+  const tk=A.tasks.find(x=>x.id===id);
+  const msg=_lang==='en'?`Delete task "${tk?.name}"?`:`タスク「${tk?.name}」を削除してよいですか？`;
+  showConfirm(msg,()=>{
+    if(tk&&tk.company){const still=A.tasks.filter(x=>x.id!==id&&x.company===tk.company).length;if(!still)delete A.coColors[tk.company]}
+    const _toDelete=new Set([id]);
+    const _collectChildren=pid=>{A.tasks.filter(t=>t.parentId===pid).forEach(t=>{_toDelete.add(t.id);_collectChildren(t.id);});};
+    _collectChildren(id);
+    A.tasks=A.tasks.filter(t=>!_toDelete.has(t.id)); ra();
+    toast(_lang==='en'?'Task deleted':'タスクを削除しました','inf','🗑');
+    if(tk)logActivity(_lang==='en'?`Deleted task "${tk.name}"`:`タスク「${tk.name}」を削除しました`);
+  });
+}
+
+/* ─── Share ──────────────────────────────────── */
+function goHome(){
+  const ls=g('ls');
+  const saved=ls&&ls.textContent&&!ls.textContent.includes(t('unsaved'));
+  if(!saved){
+    showConfirm(
+      _lang==='en'
+        ?'You have unsaved changes. Leave without saving?'
+        :'未保存のデータがあります。保存せずにトップページへ戻りますか？',
+      ()=>{ window.location.href='https://ganchan.online/'; }
+    );
+  }else{
+    window.location.href='https://ganchan.online/';
+  }
+}
+
+function shareURL(){
+  const url=window.location.href.split('?')[0]+'?p='+_appPid;
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(url).then(()=>{
+      toast(_lang==='en'?'URL copied to clipboard!':'URLをクリップボードにコピーしました！','vio','🔗');
+      logActivity(_lang==='en'?'Project URL copied':'プロジェクトURLをコピーしました');
+    }).catch(()=>fallbackCopy(url));
+  }else fallbackCopy(url);
+}
+function fallbackCopy(txt){
+  const el=document.createElement('textarea');el.value=txt;el.style.cssText='position:fixed;opacity:0';
+  document.body.appendChild(el);el.focus();el.select();
+  try{document.execCommand('copy');toast(_lang==='en'?'URL copied':'URLをコピーしました','vio','🔗')}catch{toast(_lang==='en'?'Copy failed':'コピーできませんでした','err')}
+  document.body.removeChild(el);
+}
+
+/* ─── Server I/O ─────────────────────────────── */
+async function saveData(){
+  A.project.name=g('pname').value; A.project.start_date=g('vs').value; A.project.end_date=g('ve').value; A.lightning_date=g('ld').value;
+  try{
+    const r=await fetch('/api?action=save&p='+_appPid,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(A)});
+    const d=await r.json();
+    if(d.success){
+      const ts=new Date().toLocaleTimeString(_lang==='en'?'en-US':'ja-JP');
+      g('ls').textContent=t('saved_at')+ts;
+      toast(_lang==='en'?'Saved successfully':'保存しました','ok','✓');
+      logActivity(_lang==='en'?`System: saved project "${A.project.name}"`:`システム: プロジェクト「${A.project.name}」の保存が完了しました`);
+    }else toast((_lang==='en'?'Save failed: ':'保存失敗: ')+(d.error||'?'),'err','⚠');
+  }catch(e){toast((_lang==='en'?'Server error: ':'サーバー接続エラー: ')+e.message,'err','⚠')}
+}
+
+async function loadData(silent=false){
+  try{
+    const r=await fetch('/api?action=load&p='+_appPid);if(!r.ok)throw new Error('HTTP '+r.status);
+    const d=await r.json();
+    if(d&&d.tasks!==undefined){
+      Object.assign(A,d);if(!A.coColors)A.coColors={};rebuildCoColors();
+      g('pname').value=A.project.name||'';
+      g('vs').value=A.project.start_date||toS(new Date());
+      g('ve').value=A.project.end_date||offD(toS(new Date()),90);
+      g('ld').value=A.lightning_date||toS(new Date());
+      if(A.sl){g('lbtn').textContent='⚡ ON';g('lbtn').classList.add('on')}
+      ra();if(!silent){toast(_lang==='en'?'Data loaded':'データを読み込みました','ok','📂');logActivity(_lang==='en'?'Data loaded':'データを読み込みました')}
+    }
+  }catch(e){if(!silent)toast((_lang==='en'?'Load error: ':'読み込みエラー: ')+e.message,'err','⚠')}
+}
+
+/* ─── Boot ───────────────────────────────────── */
+document.addEventListener('DOMContentLoaded',async()=>{
+  // ?p= なし（ランディングページ表示中）はアプリ初期化しない
+  if(!_pid) return;
+  const today=toS(new Date()),e90=offD(today,90);
+  g('vs').value=today;g('ve').value=e90;g('ld').value=today;
+  A.lightning_date=today;A.project.start_date=today;A.project.end_date=e90;
+  g('ls').textContent=t('unsaved');
+  buildCP(); renderHelpBody(); applyI18n();
+  fetchH(); await loadData(true); ra();
+  g('pname').addEventListener('input',e=>{A.project.name=e.target.value});
+  const gr=g('gr'),ts=g('ts');
+  gr.addEventListener('scroll',()=>{if(_lk)return;_lk=true;ts.scrollTop=gr.scrollTop;_lk=false});
+  ts.addEventListener('scroll',()=>{if(_lk)return;_lk=true;gr.scrollTop=ts.scrollTop;_lk=false});
+  logActivity(_lang==='en'?'Gan-chan started':'ガンちゃんを起動しました');
+});
+
+document.querySelectorAll('.overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)cm_(o.id)}));
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape')document.querySelectorAll('.overlay.show').forEach(m=>cm_(m.id));
+  if((e.ctrlKey||e.metaKey)&&e.key==='s'){e.preventDefault();saveData()}
+});
+
+
+/* ─── Contact Form ───────────────────────────── */
+function openContact() { cm_('page-faq'); sm('page-contact') }
+
+/* ─── GAS URL (お問い合わせ → スプレッドシート) ─── */
+const CONTACT_GAS_URL = 'https://script.google.com/macros/s/AKfycbyzSRVOw6TJC0595BmwzURuBJiEf__D66LAbQtvevjUNCE8oy21WVOnwrRwUh6OIvND/exec';
+// ↑ GASをデプロイした後、上記URLを実際のデプロイURLに書き換えてください
+
+function submitContact() {
+  const inquiry_type = document.getElementById('cf-type').value;
+  const name         = document.getElementById('cf-name').value.trim();
+  const email        = document.getElementById('cf-email').value.trim();
+  const message      = document.getElementById('cf-message').value.trim();
+
+  if (!inquiry_type) { toast('お問い合わせの種類を選択してください','err'); return }
+  if (!name)         { toast('お名前を入力してください','err'); return }
+  if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email))
+                     { toast('正しいメールアドレスを入力してください','err'); return }
+  if (!message)      { toast('お問い合わせ内容を入力してください','err'); return }
+
+  const btn = document.getElementById('cf-submit-btn');
+  btn.disabled = true;
+  btn.textContent = '送信中…';
+
+  // Build GAS URL with query params (GAS doGet/doPost both supported)
+  const params = new URLSearchParams({ inquiry_type, name, email, message });
+  const url = CONTACT_GAS_URL + '?' + params.toString();
+
+  fetch(url, { method: 'POST', mode: 'no-cors' })
+    .then(() => { showContactSuccess(); })
+    .catch(() => { showContactSuccess(); }); // no-cors always resolves
+}
+
+function showContactSuccess() {
+  document.getElementById('contact-form-wrap').style.display = 'none';
+  document.getElementById('cf-success').style.display = 'block';
+  document.getElementById('cf-foot').style.display = 'none';
+  logActivity('お問い合わせを送信しました');
+  toast('お問い合わせを受け付けました','ok','✓');
+}
+
+/* ─── Panel Resizer ── */
+(function(){
+  const MIN_W=260,MAX_W=900;
+  let _rz=false,_startX=0,_startW=0;
+  function initResizer(){
+    const rz=document.getElementById('g-resizer'),lp=document.querySelector('.g-left');
+    if(!rz||!lp)return;
+    const s=parseInt(localStorage.getItem('ganchan_left_w'));
+    if(s&&s>=MIN_W&&s<=MAX_W){lp.style.width=s+'px';lp.style.minWidth=s+'px';}
+    rz.addEventListener('mousedown',on);rz.addEventListener('touchstart',on,{passive:false});
+  }
+  function on(e){
+    _rz=true;_startX=e.touches?e.touches[0].clientX:e.clientX;
+    _startW=document.querySelector('.g-left').offsetWidth;
+    document.getElementById('g-resizer').classList.add('dragging');
+    document.body.style.cssText='cursor:col-resize;user-select:none';
+    document.addEventListener('mousemove',mv);document.addEventListener('touchmove',mv,{passive:false});
+    document.addEventListener('mouseup',up);document.addEventListener('touchend',up);e.preventDefault();
+  }
+  function mv(e){if(!_rz)return;const cx=e.touches?e.touches[0].clientX:e.clientX;
+    const w=Math.min(MAX_W,Math.max(MIN_W,_startW+(cx-_startX)));
+    const lp=document.querySelector('.g-left');lp.style.width=w+'px';lp.style.minWidth=w+'px';e.preventDefault();}
+  function up(){if(!_rz)return;_rz=false;document.getElementById('g-resizer').classList.remove('dragging');
+    document.body.style.cssText='';localStorage.setItem('ganchan_left_w',document.querySelector('.g-left').offsetWidth);
+    document.removeEventListener('mousemove',mv);document.removeEventListener('touchmove',mv);
+    document.removeEventListener('mouseup',up);document.removeEventListener('touchend',up);}
+  document.addEventListener('DOMContentLoaded',initResizer);
+})();
+
+/* ─── Column Resizer ── */
+(function(){
+  const COL_MIN=80,COL_MAX=600;
+  let _crz=false,_cX=0,_cW=0;
+  window._colNameW=parseInt(localStorage.getItem('ganchan_col_name_w'))||0;
+  window._applyColWidth=function(w){
+    w=Math.min(COL_MAX,Math.max(COL_MIN,w));window._colNameW=w;
+    const n=document.querySelector('.lh-name');
+    if(n){n.style.flex='none';n.style.width=w+'px';}
+    document.querySelectorAll('.t-row .c-nm').forEach(el=>{el.style.flex='none';el.style.width=w+'px';});
+  };
+  function init(){
+    if(window._colNameW)window._applyColWidth(window._colNameW);
+    const cr=document.getElementById('col-resizer');if(!cr)return;
+    cr.addEventListener('mousedown',on);cr.addEventListener('touchstart',on,{passive:false});
+  }
+  function on(e){_crz=true;_cX=e.touches?e.touches[0].clientX:e.clientX;
+    const n=document.querySelector('.lh-name');_cW=n?n.offsetWidth:(window._colNameW||180);
+    document.getElementById('col-resizer').classList.add('dragging');
+    document.body.style.cssText='cursor:col-resize;user-select:none';
+    document.addEventListener('mousemove',mv);document.addEventListener('touchmove',mv,{passive:false});
+    document.addEventListener('mouseup',up);document.addEventListener('touchend',up);
+    e.preventDefault();e.stopPropagation();}
+  function mv(e){if(!_crz)return;const cx=e.touches?e.touches[0].clientX:e.clientX;
+    window._applyColWidth(_cW+(cx-_cX));e.preventDefault();}
+  function up(){if(!_crz)return;_crz=false;document.getElementById('col-resizer').classList.remove('dragging');
+    document.body.style.cssText='';localStorage.setItem('ganchan_col_name_w',window._colNameW);
+    document.removeEventListener('mousemove',mv);document.removeEventListener('touchmove',mv);
+    document.removeEventListener('mouseup',up);document.removeEventListener('touchend',up);}
+  document.addEventListener('DOMContentLoaded',init);
+  const obs=new MutationObserver(()=>{if(window._colNameW)window._applyColWidth(window._colNameW);});
+  document.addEventListener('DOMContentLoaded',()=>{const ts=document.getElementById('ts');if(ts)obs.observe(ts,{childList:true});});
+})();
+
+/* ─── Vertical Resizer (gantt ↕ bottom) ──────────── */
+(function(){
+  const MIN_B=60, MAX_B=600;
+  let _vrz=false, _vStartY=0, _vStartH=0;
+
+  function initVResizer(){
+    const vr=document.getElementById('v-resizer');
+    const bs=document.querySelector('.bottom-section');
+    if(!vr||!bs)return;
+    const saved=parseInt(localStorage.getItem('ganchan_bottom_h'));
+    if(saved&&saved>=MIN_B&&saved<=MAX_B){ bs.style.height=saved+'px'; }
+    vr.addEventListener('mousedown',onVDown);
+    vr.addEventListener('touchstart',onVDown,{passive:false});
+  }
+  function onVDown(e){
+    _vrz=true;
+    _vStartY=e.touches?e.touches[0].clientY:e.clientY;
+    _vStartH=document.querySelector('.bottom-section').offsetHeight;
+    document.getElementById('v-resizer').classList.add('dragging');
+    document.body.style.cursor='row-resize';
+    document.body.style.userSelect='none';
+    document.addEventListener('mousemove',onVMove);
+    document.addEventListener('touchmove',onVMove,{passive:false});
+    document.addEventListener('mouseup',onVUp);
+    document.addEventListener('touchend',onVUp);
+    e.preventDefault();
+  }
+  function onVMove(e){
+    if(!_vrz)return;
+    const cy=e.touches?e.touches[0].clientY:e.clientY;
+    const h=Math.min(MAX_B,Math.max(MIN_B,_vStartH-( cy-_vStartY)));
+    document.querySelector('.bottom-section').style.height=h+'px';
+    e.preventDefault();
+  }
+  function onVUp(){
+    if(!_vrz)return; _vrz=false;
+    document.getElementById('v-resizer').classList.remove('dragging');
+    document.body.style.cursor=''; document.body.style.userSelect='';
+    localStorage.setItem('ganchan_bottom_h',document.querySelector('.bottom-section').offsetHeight);
+    document.removeEventListener('mousemove',onVMove);
+    document.removeEventListener('touchmove',onVMove);
+    document.removeEventListener('mouseup',onVUp);
+    document.removeEventListener('touchend',onVUp);
+  }
+  document.addEventListener('DOMContentLoaded',initVResizer);
+})();
+
+</script>
+<div class="drop-hint" id="drop-hint"></div>
+</body>
+</html>

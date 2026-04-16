@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Claude Code
+.claude/
+
+# 旧PHPバックエンド（Vercel移行済み）
+api.php
+
+# 仕様書・ドキュメント（リポジトリ外で管理）
+*.docx
+
+# Vercel
+.vercel/
+
+# Node.js
+node_modules/
+
+# 環境変数
+.env
+.env.local
+
+# データファイル（Vercel KVで管理）
+data/
