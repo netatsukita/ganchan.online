@@ -50,8 +50,10 @@ export default async function handler(req, res) {
       const blob = blobs.find(b => b.pathname === blobPath);
 
       if (blob) {
-        // privateブロブは downloadUrl（署名付きURL）で取得
-        const resp = await fetch(blob.downloadUrl);
+        // privateブロブはAuthorizationヘッダー付きで取得
+        const resp = await fetch(blob.url, {
+          headers: { Authorization: `Bearer ${process.env.BLOB_READ_WRITE_TOKEN}` },
+        });
         if (!resp.ok) throw new Error(`Blob fetch failed: ${resp.status}`);
         const data = await resp.json();
         return res.status(200).json(data);
