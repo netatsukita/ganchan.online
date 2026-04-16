@@ -1,14 +1,14 @@
 /**
- * ガンちゃん v2.15 — Backend API（Vercel Serverless Function + Vercel KV）
+ * ガンちゃん v2.15 — Backend API（Vercel Serverless Function + Vercel Blob）
  *
  * ■ セキュリティ対策
  *   [XSS]    出力はすべて JSON。HTML は一切出力しない
  *   [CSRF]   Origin / Referer ヘッダーを検証
  *   [入力検証] 各フィールドの型・長さ・形式を厳格にバリデーション
- *   [ストレージ] Vercel KV（Redis）を使用。ファイルシステムに依存しない
+ *   [ストレージ] Vercel Blob を使用。ファイルシステムに依存しない
  */
 
-import { kv } from '@vercel/kv';
+import { put, list } from '@vercel/blob';
 
 const APP_VER = 'v2.15';
 const MAX_PAYLOAD_BYTES = 5 * 1024 * 1024; // 5MB
@@ -35,7 +35,7 @@ export default async function handler(req, res) {
 
   // ── プロジェクトID ─────────────────────────────────────────
   const p = (req.query.p ?? '').replace(/[^a-zA-Z0-9_\-]/g, '');
-  const kvKey = p !== '' ? `gantt:${p}` : 'gantt:default';
+  const blobPath = `gantt/${p !== '' ? p : 'default'}.json`;
 
   // ── アクション（ホワイトリスト） ───────────────────────────────
   const action = (req.query.action ?? '').trim();
@@ -48,10 +48,16 @@ export default async function handler(req, res) {
     //  LOAD
     // ════════════════════════════════════════════════════════════
     if (action === 'load') {
-      const data = await kv.get(kvKey);
-      if (data) {
+      const { blobs } = await list({ prefix: blobPath, limit: 1 });
+      const blob = blobs.find(b => b.pathname === blobPath);
+
+      if (blob) {
+        const resp = await fetch(blob.downloadUrl);
+        if (!resp.ok) throw new Error('Blob fetch failed');
+        const data = await resp.json();
         return res.status(200).json(data);
       }
+
       // 新規プロジェクトの初期値
       const today   = todayStr();
       const endDate = offsetDate(today, 90);
@@ -68,7 +74,6 @@ export default async function handler(req, res) {
     //  SAVE
     // ════════════════════════════════════════════════════════════
     if (action === 'save') {
-      // ペイロードサイズ確認（Vercel は body を自動パースするが念のため）
       const contentLength = parseInt(req.headers['content-length'] ?? '0', 10);
       if (contentLength > MAX_PAYLOAD_BYTES) {
         return res.status(413).json({ error: 'データサイズが大きすぎます（上限5MB）' });
@@ -131,7 +136,11 @@ export default async function handler(req, res) {
         _version:       APP_VER,
       };
 
-      await kv.set(kvKey, cleanData);
+      await put(blobPath, JSON.stringify(cleanData), {
+        access: 'private',
+        contentType: 'application/json',
+        allowOverwrite: true,
+      });
 
       const ts = jstNow();
       return res.status(200).json({ success: true, timestamp: ts, taskCount: cleanTasks.length });
