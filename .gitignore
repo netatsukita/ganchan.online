@@ -23,3 +23,5 @@ node_modules/
 
 # データファイル（Vercel KVで管理）
 data/
+.vercel
+.env*.local

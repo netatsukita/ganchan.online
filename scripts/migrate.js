@@ -1,34 +1,20 @@
 /**
- * データ移行スクリプト
- *
- * heteml 上の data/*.json を Vercel KV へアップロードします。
- *
- * ■ 使い方
- *   1. heteml から data/ フォルダをローカルへダウンロード
- *   2. .env.local に KV の接続情報を設定（vercel env pull .env.local）
- *   3. node scripts/migrate.js
- *
- * ■ 必要な環境変数（.env.local または shell に設定）
- *   KV_REST_API_URL
- *   KV_REST_API_TOKEN
+ * データ移行スクリプト（heteml → Vercel Blob）
+ * 実行: node scripts/migrate.js
  */
 
-import { createClient } from '@vercel/kv';
+import { put } from '@vercel/blob';
 import { readFileSync, readdirSync, existsSync } from 'fs';
-import { join, basename } from 'path';
+import { join } from 'path';
 import { config } from 'dotenv';
 
-// .env.local を読み込む
 config({ path: '.env.local' });
 
-const { KV_REST_API_URL, KV_REST_API_TOKEN } = process.env;
-if (!KV_REST_API_URL || !KV_REST_API_TOKEN) {
-  console.error('❌ 環境変数 KV_REST_API_URL / KV_REST_API_TOKEN が未設定です。');
-  console.error('   vercel env pull .env.local を実行してから再試行してください。');
+const { BLOB_READ_WRITE_TOKEN } = process.env;
+if (!BLOB_READ_WRITE_TOKEN) {
+  console.error('❌ BLOB_READ_WRITE_TOKEN が未設定です。vercel env pull .env.local を実行してください。');
   process.exit(1);
 }
-
-const kv = createClient({ url: KV_REST_API_URL, token: KV_REST_API_TOKEN });
 
 const dataDir = join(process.cwd(), 'data');
 if (!existsSync(dataDir)) {
@@ -36,10 +22,10 @@ if (!existsSync(dataDir)) {
   process.exit(1);
 }
 
-const files = readdirSync(dataDir).filter(f => f.endsWith('.json') && !f.startsWith('.'));
+const files = readdirSync(dataDir).filter(f => f.endsWith('.json') && f.startsWith('gantt_'));
 
 if (files.length === 0) {
-  console.log('ℹ️  移行対象の JSON ファイルが見つかりませんでした。');
+  console.log('ℹ️  移行対象のJSONファイルが見つかりませんでした。');
   process.exit(0);
 }
 
@@ -47,25 +33,27 @@ console.log(`📦 移行対象: ${files.length} ファイル\n`);
 
 for (const file of files) {
   const filePath = join(dataDir, file);
-  let kvKey;
+  let blobPath;
 
   if (file === 'gantt_data.json') {
-    kvKey = 'gantt:default';
+    blobPath = 'gantt/default.json';
   } else {
-    // gantt_{projectId}.json → gantt:{projectId}
     const match = file.match(/^gantt_(.+)\.json$/);
-    if (!match) {
-      console.log(`⏭  スキップ: ${file}（命名規則外）`);
-      continue;
-    }
-    kvKey = `gantt:${match[1]}`;
+    if (!match) { console.log(`⏭  スキップ: ${file}`); continue; }
+    blobPath = `gantt/${match[1]}.json`;
   }
 
   try {
-    const raw  = readFileSync(filePath, 'utf8');
-    const data = JSON.parse(raw);
-    await kv.set(kvKey, data);
-    console.log(`✅ ${file} → ${kvKey}`);
+    const content = readFileSync(filePath, 'utf8');
+    JSON.parse(content); // JSON検証
+    await put(blobPath, content, {
+      access: 'private',
+      contentType: 'application/json',
+      addRandomSuffix: false,
+      allowOverwrite: true,
+      token: BLOB_READ_WRITE_TOKEN,
+    });
+    console.log(`✅ ${file} → ${blobPath}`);
   } catch (err) {
     console.error(`❌ ${file}: ${err.message}`);
   }
